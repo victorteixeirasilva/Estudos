@@ -1,0 +1,15 @@
+package br.cursoemvideo.aula14;
+
+public class ProgramaPrincipal {
+
+	public static void main(String[] args) {
+		Video v[] = new Video[3];
+		v[0]=new Video("VIDEO 1");
+		v[1]=new Video("VIDEO 2");
+		v[2]=new Video("VIDEO 3");
+		
+		System.out.println(v[0].toString());
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package br.cursoemvideo.aula10;
+
+public class Professor extends Pessoa {
+	private String especialidade;
+	private float salario;
+	public void receberAum(float aum) {
+		System.out.println("Salariro Antigo: "+this.getSalario());
+		this.setSalario(getSalario()+aum);
+		System.out.println("Teve um aumento de: "+aum);
+		System.out.println("Salario Atual: "+this.getSalario());
+		
+	}
+	public String getEspecialidade() {
+		return especialidade;
+	}
+	public void setEspecialidade(String especialidade) {
+		this.especialidade = especialidade;
+	}
+	public float getSalario() {
+		return salario;
+	}
+	public void setSalario(float salario) {
+		this.salario = salario;
+	}
+	
+
+}

@@ -1,0 +1,28 @@
+package br.cursoemvideo.aula14;
+
+public class Gafanhoto extends Pessoa {
+	public Gafanhoto(String nome, int idade, String sexo) {
+		super(nome, idade, sexo);
+	}
+	//Atributos
+	private String login;
+	private boolean totAssistindo;
+	//Metodos
+	public void viuMaisUm() {
+		System.out.println("Vendo mais um video ");
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public boolean isTotAssistindo() {
+		return totAssistindo;
+	}
+	public void setTotAssistindo(boolean totAssistindo) {
+		this.totAssistindo = totAssistindo;
+	}
+	
+
+}

@@ -1,0 +1,7 @@
+package br.cursoemvideo.aula07;
+
+public class Luta {
+	private Lutador desafiado;
+	private Lutador desafiante;
+
+}
