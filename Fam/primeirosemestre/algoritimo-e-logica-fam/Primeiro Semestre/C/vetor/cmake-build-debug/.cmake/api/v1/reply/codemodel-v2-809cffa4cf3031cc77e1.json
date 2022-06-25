@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "vetor",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "vetor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vetor-Debug-2d739bff03faf0035a7b.json",
+					"name" : "vetor",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/vitin.teixx/\u00c1rea de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/C/vetor/cmake-build-debug",
+		"source" : "/home/vitin.teixx/\u00c1rea de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/C/vetor"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

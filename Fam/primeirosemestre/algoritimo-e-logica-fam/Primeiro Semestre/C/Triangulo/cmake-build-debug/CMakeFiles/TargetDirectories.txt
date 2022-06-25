@@ -1,0 +1,3 @@
+/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/C/Triangulo/cmake-build-debug/CMakeFiles/Triangulo.dir
+/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/C/Triangulo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/C/Triangulo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
