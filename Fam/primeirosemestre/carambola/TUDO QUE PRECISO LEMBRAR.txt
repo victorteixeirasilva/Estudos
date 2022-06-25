@@ -1,0 +1,45 @@
+
+============= Conta Gmail/Drive ============
+
+Email: carambola.p.i.fam@gmail.com
+Senha: carambola12345678
+
+============================================
+
+========== Banco de Dados(Local) ===========
+
+PhPMyAdimin
+Nome do Banco: carambolawp
+Codificação: Latin2_General_CI
+Usuario: root
+Senha:
+
+=============================================
+
+================ WordPress ==================
+
+Usuario: carambolaweb
+Senha: ToU&sAZ^SPIp%wHjdi
+
+=============================================
+
+================= Plugins ===================
+
+=> Tema: Astra (Ultilizando um AstraChild)
+=> Astra Widgets | Versão 1.2.10 | Por Brainstorm Force
+=> Companion Auto Update | Versão 3.8.5 | Por Papin Schipper
+=> Editor clássico | Versão 1.6.2 | Por Colaboradores do WordPress (ATIVADO)
+=> EWWW Image Optimizer | Versão 6.4.2 | Por Exactly WWW (ATIVADO)
+=> Google Analytics for WordPress by MonsterInsights | Versão 8.4.0 | Por MonsterInsights
+=> Microthemer | Versão 7.1.1.5 | Por Themeover (ATIVADO)
+=> Rank Math SEO | Versão 1.0.85.1 | Por Rank Math 
+=> Really Simple SSL | Versão 5.3.1 | Por Really Simple Plugins 
+=> Ultimate Addons for Gutenberg | Versão 1.25.4 | Por Brainstorm Force (ATIVADO)
+=> UpdraftPlus - Backup/Restore | Versão 1.22.11 | Por UpdraftPlus.Com, DavidAnderson
+=> WP Mail SMTP | Versão 3.3.0 | Por WPForms
+=> WP Super Cache | Versão 1.7.7 | Por Automattic
+=> WPForms Lite | Versão 1.7.3 | Por WPForms (ATIVADO)
+=> WPS Hide Login | Versão 1.9.4 | Por WPServeur, NicolasKulka, wpformation
+=> Duplicator
+
+ 
