@@ -1,0 +1,57 @@
+.contactflex{
+    display: none;
+    h5{
+        font-size: 12px;
+        text-align: center;
+    }
+    &--itens{
+        
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        svg{
+           width: 20px;
+           height: 20px;
+           padding: 0 5px;
+        }
+    }
+}
+
+#contanctsvg:hover +.contactflex{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 22px;
+        border-radius: 4px;
+        z-index: 4;
+        padding: 10px;
+        
+        display: block;
+}
+
+#contanctsvg{
+    @include max-screen( $screen-md ) {
+            display: none; 
+       
+        }
+}
+
+#contactmobile{
+        width: 20px;
+        height: 20px;
+    
+}
+
+.contactflexmobile{
+    &--itens{
+        
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        svg{
+           width: 20px;
+           height: 20px;
+          
+        }
+    }
+}

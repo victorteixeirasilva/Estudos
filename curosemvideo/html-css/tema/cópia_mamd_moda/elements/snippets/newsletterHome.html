@@ -1,0 +1,12 @@
+<section class="newsletter__containerFlexHome" data-tray-tst="newsletter_box">
+        <h3>Assine nossa newsletter!</h3>
+
+        <form action="{{ links.newsletter }}&v=js" method="post" name="newsletter" data-tray-tst="newsletter_form">
+                <input  id="news-name" name="name" type="text" placeholder="{{ Translation('digitar_nome') }}" required>
+          
+                <input  id="news-email" name="email" type="email" placeholder="{{ Translation('digitar_email') }}" data-tray-tst="newsletter_email" required>
+          
+                <button data-tray-tst="newsletter_cadastrar">{{ Translation('cadastrar') }}</button>
+
+        </form>
+</section>

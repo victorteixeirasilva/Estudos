@@ -1,0 +1,83 @@
+.catalog{
+    &--header{
+        padding: 188px 10px 0px 10px;
+    }
+    &--name{
+        height: 34px;
+        max-height: 34px;
+        padding: 10px;
+        text-align: center;
+        line-height: 1.23;
+        letter-spacing: .28px;
+    }
+  
+    &__flex-container{
+        display:flex;
+        @include max-screen( $screen-sm ) {
+            flex-direction: column;
+        }
+    
+    &--itensFilter{
+        width: 20%;
+        @include max-screen( $screen-sm ) {
+            width: 100%;
+        }
+    
+    }
+    &--itensProduct{
+        width: 80%;
+        @include max-screen( $screen-sm ) {
+            width: 100%;
+        }
+    
+    }
+    }
+
+    &__filter-desktop{
+        display: block;
+       
+        @include max-screen( $screen-sm ) {
+           display: none;
+        }
+    }                  
+   
+    &__filter-mobile{
+        display: none;
+       
+    }  
+    
+    &__whithout-product{
+       
+
+        &__text{
+            font-size: 40px;
+            text-align: center;
+           
+            @include max-screen( $screen-xs ) {
+
+            font-size: 24px;
+            }
+        }
+
+    }
+
+    &__button-link-tohome{
+        margin: 10px;
+        width: 300px;
+        padding: 10px;
+       
+        border-radius: 3px;
+        &--text{
+           
+            font-size: 18px;
+      
+        } 
+
+    }
+  
+
+  
+
+
+}
+

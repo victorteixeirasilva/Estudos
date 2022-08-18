@@ -1,0 +1,44 @@
+$screen-md: 1025px;
+$screen-sm: 900px;
+$screen-ss: 768px;
+$screen-xs: 470px;
+
+@mixin screen( $minWidth, $maxWidth ) {
+    @media screen and ( min-width: $minWidth ) and ( max-width: $maxWidth ) {
+        @content;
+    }
+}
+@mixin max-screen( $maxWidth ) {
+    @media screen and ( max-width: $maxWidth ) {
+        @content;
+    }
+}
+@mixin min-screen( $minWidth ) {
+    @media screen and ( min-width: $minWidth ) {
+        @content;
+    }
+}
+@mixin ipad-screen( $minWidth: 768px, $maxWidth: 1024px ) {
+    @media only screen and ( min-device-width: $minWidth ) and ( max-device-width: $maxWidth ) and ( -webkit-min-device-pixel-ratio: 2 ) {
+        @content;
+    }
+}
+@mixin iphone-screen( $minWidth: 320px, $maxWidth: 568px ) {
+    @media only screen and ( min-device-width: $minWidth ) and ( max-device-width: $maxWidth ) and ( -webkit-min-device-pixel-ratio: 2 ) {
+        @content;
+    }
+}
+@mixin scrollbar($width: 10px, $track: #f1f1f1, $handle: #888, $hover: #555) {
+    ::-webkit-scrollbar {
+        width: $width;
+    }
+    ::-webkit-scrollbar-track {
+        background: $track;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $handle;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: $hover;
+    }
+}

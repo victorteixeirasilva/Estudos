@@ -1,0 +1,62 @@
+{% set main = Categories() %}
+{% set sub = Categories({ id: category.id }) %}
+
+{# <pre class="categories">
+    {{ dump(main) }}
+</pre>
+
+<pre class="category">
+    {{ dump(category) }}
+</pre> #}
+
+{# <pre>
+    {{ dump(sub.children|length) }}
+</pre> #}
+
+<nav class="menu">
+    {# main #}
+
+    <section id="main-list" class="menu__main {{ sub.children ? 'menu__main--disable' }}">
+        <div class="menu__center menu__center--main">
+            {% for cat in main %}
+                {% if loop.index <= 6 %}
+                    <a class="menu__link menu__link--main" href="{{ cat.link }}">
+                        {% if cat.images[0] %}
+                            <img class="menu__image" src="{{ cat.images[0] }}" alt="{{ cat.name }}">
+                        {% endif %}
+
+                        <p class="menu__name menu__name--main">{{ cat.name }}</p>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+
+    {# sub #}
+    {% if pages.current in ['catalog', 'search'] %}
+        {% if sub.children %}
+            <section class="menu__sub {{ sub.children|length > 5 ? 'swiper-container' }}" >
+                <div class="menu__center menu__center--sub {{ sub.children|length > 5 ? 'swiper-wrapper' }}">
+                    <section id="trigger-back" class="menu__item menu__item--back ">
+                        <i class="menu__icon menu__icon--back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="50" fill="#ffffff" viewBox="0 0 493.353 493.352"><path d="M490.786 212.678c-1.718-1.713-3.901-2.568-6.57-2.568H127.907v-63.953c0-3.809-1.812-6.567-5.424-8.28-3.621-1.521-6.952-.949-9.995 1.713L2.853 240.658C.95 242.564 0 244.848 0 247.511c0 2.474.95 4.665 2.853 6.567l109.636 99.928c3.046 2.474 6.377 2.956 9.995 1.427 3.612-1.52 5.424-4.278 5.424-8.278v-63.953h356.315c2.663 0 4.854-.859 6.564-2.567 1.711-1.711 2.566-3.897 2.566-6.563v-54.821c.003-2.665-.856-4.858-2.567-6.573z"/></svg>
+                        </i>
+                    </section>
+
+                    {% for item in sub.children %}
+                        <section class="menu__item menu__item--sub {{ sub.children|length > 5 ? 'swiper-slide' }}">
+                            <a href="{{ item.link }}" class="menu__link menu__link--sub">
+                                <p class="menu__name menu__name--sub">{{ item.name }}</p>
+                            </a>
+                        </section>
+                    {% endfor %}
+                </div>
+
+                {% if sub.children|length > 5  %}
+                    <div class="menu__scrollbar swiper-scrollbar"></div>
+                {% endif %}
+
+            </section>
+        {% endif %}
+    {% endif %}
+</nav>

@@ -1,0 +1,136 @@
+#cartApiTrayHover{
+    position: absolute;
+    visibility: hidden;
+    width: 480px;
+    height: 400px;
+    z-index: 10;
+    padding: 10px;
+    right: 0;
+    transition: none;
+    transform: translateY(20px);
+    opacity: 0.9;  
+    overflow: scroll;
+    @include max-screen( $screen-ss ) {
+      
+        width: 100%;
+     }
+
+}
+
+.cartdropdown{
+    display: flex;
+    flex-direction: column;
+
+    &--header{
+      
+        padding: 10px 16px;
+        display: flex;
+        justify-content: space-between;
+
+
+
+        &--itens{
+            display: flex;
+
+            font-size: 15px;
+            line-height: 150%;
+
+
+            svg{
+                margin-right: 20px;
+            }
+        }
+
+    }
+    svg{
+        width: 35px;
+        height: 35px;
+    }
+    span{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+        
+    }
+
+
+}
+
+
+.cartsItensValues{
+    padding: 5px;
+    height: 150px;
+    border: solid 1px #E0E0E0;
+    margin: 15px;
+    display: flex;
+
+    &--itens{
+
+        svg{
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    
+}
+
+.cartApi{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+
+    svg{
+        width: 35px;
+        height: 35px;
+    }
+    &--buyCartApi{
+        padding: 10px;
+       
+
+    }
+
+
+    &--itens{
+        display: flex;
+        align-items: center;
+
+        p{
+           
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+          
+        }
+    }
+}
+
+.cartsItensValues.duplicate{
+    display: none;
+}
+
+.nameProApi{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    color: #333333;
+    
+}
+
+.quantityProApiFlex{
+    display: flex;
+    justify-content: space-between;
+}
+.quantityProApi{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    color: #333333;
+}
+.priceProApi{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+    color: #000000;
+}

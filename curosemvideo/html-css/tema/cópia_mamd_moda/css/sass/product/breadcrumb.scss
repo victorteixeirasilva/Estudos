@@ -1,0 +1,19 @@
+.breadcrumb{
+    padding:  174px 10px 10px 10px ;
+    font-size: 16px;
+
+    &__separator{
+        font-weight: 600;
+        padding: 0px 4px;
+       
+    }
+
+    @include max-screen( $screen-ss ) {
+        padding:  120px 10px 10px 10px ;
+
+     }
+
+   
+
+}             
+    

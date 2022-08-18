@@ -1,0 +1,12 @@
+<div class="payment__listFlexOrder">
+    {% for payment in paymentMethods.order %}
+            <img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+    {% endfor %}
+
+</div>
+<div class="payment__listFlexOrder">
+    {% for payment in paymentMethods.credit %} 
+            <img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+       
+    {% endfor %} 
+    </div>

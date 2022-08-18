@@ -1,0 +1,222 @@
+<ul class="level1" id="catlvl_3_desktop" data-tray-tst="categoria">
+    {% for level1 in categories %}
+    {% if categories|length >= 8 %}
+
+    {% if loop.index <= 8 %}
+
+    <li class="level1__item-level1 {{ loop.index > 4 ? 'sub-left' }}">
+        <a href="{{ level1.link }}" class="link-level1" data-tray-tst="categoria_lvl_1">
+            <img class="level1__item-level1--categorie-header" src="{{ level1.images[0] }}">
+            <span>{{ level1.name }}</span>
+        </a>
+
+            {% if level1.children  %}
+            <svg version="1.1" class="icon__arrow-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 306 306" xml:space="preserve" style="fill: rgb(196, 45, 45);"><g id="expand-more"><polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon></g>
+            </svg>
+
+            <ul class="level2">
+                <div class="level2__container-flex-hover-categories">
+
+
+                    <div class="level2__container-flex-hover-categories__itens-flex-hover-categories1">
+
+                        {% for level2 in level1.children %}
+                        <li class="item-level2">
+
+                            <a href="{{ level2.link }}" class="link-level2" data-tray-tst="categoria_lvl_2">
+                                <span>{{ level2.name }}</span>
+                            </a>
+
+                            {% if level2.children  %}
+                            <svg version="1.1" class="icon icon__arrow-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 306 306" xml:space="preserve" style="fill: rgb(196, 45, 45);"><g id="expand-more"><polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon></g>
+                            </svg>
+
+                            {% endif %}
+                        </li>
+
+                        <ul class="level3">
+                            {% for level3 in level2.children %}
+            
+                            <li class="item-level3">
+                                <a href="{{ level3.link }}" class="link-level3" data-tray-tst="categoria_lvl_3">
+                                    <span>{{ level3.name }}</span>
+                                </a>
+            
+                            </li>
+                            {% endfor %}
+                        </ul>
+
+                        {% endfor %}
+                    </div>
+                    <div class="level2__container-flex-hover-categories__itens-flex-hover-categories2">
+
+                        {% set products = Products({
+                       
+                                                                'limit': 1,
+                                                                 'categories': [level1.id]
+                                                                      
+                                                            }) %}
+
+                        {% if products|length > 0 %}
+                        {% for product in products %}
+                        {% element 'snippets/product-menu-cat' {
+                                                                                        'product': product
+                                                                                    } %}
+                        {% endfor %}
+
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+            </ul>
+            {% endif %}
+    </li>
+    {% endif %}
+
+    {% else %}
+
+    <li class="level1__item-level1 {{ loop.index > 3 ? 'sub-left' }}">
+        <a href="{{ level1.link }}" class="link-level1" data-tray-tst="categoria_lvl_1">
+
+            <img class="level1__item-level1--categorie-header" src="{{ level1.images[0] }}">
+
+            <span>{{ level1.name }}</span>
+        </a>
+
+            {% if level1.children  %}
+           
+            <svg version="1.1" class="icon__arrow-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 306 306" xml:space="preserve" style="fill: rgb(196, 45, 45);"><g id="expand-more"><polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon></g>
+            </svg>
+
+            <ul class="level2">
+                <div class="level2__container-flex-hover-categories">
+                    <div class="level2__container-flex-hover-categories__itens-flex-hover-categories1">
+
+                        {% for level2 in level1.children %}
+                        <li class="item-level2">
+
+                            <a href="{{ level2.link }}" class="link-level2" data-tray-tst="categoria_lvl_2">
+                                <span>{{ level2.name }}</span>
+                            </a>
+
+                            {% if level2.children  %}
+                            <svg version="1.1" class="icon icon__arrow-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 306 306" xml:space="preserve" style="fill: rgb(196, 45, 45);"><g id="expand-more"><polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon></g>
+                            </svg>
+
+                            {% endif %}
+                        </li>
+
+                        <ul class="level3">
+                            {% for level3 in level2.children %}
+            
+                            <li class="item-level3">
+                                <a href="{{ level3.link }}" class="link-level3" data-tray-tst="categoria_lvl_3">
+                                    <span>{{ level3.name }}</span>
+                                </a>
+            
+                            </li>
+                            {% endfor %}
+                        </ul>
+
+                        {% endfor %}
+            
+                        
+                    </div>
+                    <div class="level2__container-flex-hover-categories__itens-flex-hover-categories2">
+
+                        {% set products = Products({
+   
+                                            'limit': 1,
+                                             'categories': [level1.id]
+                                                  
+                                        }) %}
+
+                        {% if products|length > 0 %}
+                        {% for product in products %}
+                        {% element 'snippets/product-menu-cat' {
+                                                                    'product': product
+                                                                } %}
+                        {% endfor %}
+
+
+                        {% endif %}
+
+                    </div>
+                </div>
+
+            </ul>
+
+          
+            
+            {% endif %}
+    </li>
+
+    {% endif %}
+
+    {% endfor %}
+
+    {% if categories|length > 8 %}
+    <li class="level1__item-level1 sub-left ">
+
+        <a href="javascript:void(0)" class="link-level1">
+            <span>Ver+</span>
+           
+            <svg version="1.1" class="icon icon__arrow-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 306 306" xml:space="preserve" style="fill: rgb(196, 45, 45);"><g id="expand-more"><polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon></g>
+            </svg>
+        </a>
+        <ul class="level2">
+            <div class="level2__container-flex-hover-categories">
+                <div class="level2__container-flex-hover-categories__itens-flex-hover-categories1">
+
+                    {% for level1 in categories %}
+                    {% if loop.index > 8 %}
+                    <li class="item-level2">
+                        <a href="{{ level1.link }}" class="link-level2" data-tray-tst="categoria_lvl_1">
+                            <img class=" level1__item-level1--categorie-header" src="{{ level1.images[0] }}">
+                            <span>{{ level1.name }}</span>
+
+
+                            {% if level1.children  %}
+                            <svg version="1.1" class="icon icon__arrow-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 306 306" xml:space="preserve" style="fill: rgb(196, 45, 45);"><g id="expand-more"><polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon></g>
+                            </svg>
+                            {% endif %}
+                            </a>
+                    </li>
+
+                    <ul class="level3">
+                        {% for level2 in level1.children %}
+                        <li class="item-level3">
+                            <a href="{{ level2.link }}" class="link-level3" data-tray-tst="categoria_lvl_2">
+                                <span>{{ level2.name }}</span>
+                            </a>
+
+
+                            {% if level2.children  %}
+                            <svg version="1.1" class="icon icon__arrow-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 306 306" xml:space="preserve" style="fill: rgb(196, 45, 45);"><g id="expand-more"><polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon></g>
+                            </svg>
+                            {% endif %}
+                        </li>
+                        <ul class="level4">
+                            {% for level3 in level2.children %}
+                            <li class="item-level4">
+
+                                <a href="{{ level3.link }}" class="link-level4"
+                                    data-tray-tst="categoria_lvl_3">
+                                    <span>{{ level3.name }}</span>
+                                </a>
+
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </ul>
+    </li>
+    {% endif %}
+</ul>

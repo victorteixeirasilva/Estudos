@@ -1,0 +1,118 @@
+.container-login-flex{
+    display: flex;
+    flex-direction: column;
+    h5{
+        line-height: 1.87;
+   
+    }
+    h6{
+        @include max-screen( $screen-md ) {
+            display: none;
+        }
+    }
+
+    &__itens-login{
+        &--account{
+            svg{
+                width: 27px !important;
+                height: 24px;
+               
+            }
+        }
+        
+            #arrowHeader{            
+                width: 18px;
+                    @include max-screen( $screen-md ) {
+                        display:none;
+         
+                    }
+            }
+           
+        
+        button{
+            background-color: inherit;
+            border: none;
+            outline: none;
+          
+        } 
+    }
+
+}
+
+.container-links-flex{
+    display: flex;
+    flex-direction: column;
+
+
+    &__itens-links{
+        padding: 4px 8px;
+        margin-bottom: 14px;
+        border-radius: 2px;
+        text-align: center;
+       
+        margin: 10px 0px;
+
+        &__new{
+            margin: 0px;
+
+        }
+
+    }
+
+}
+
+#drop-popover{
+    visibility: hidden;
+    position: absolute;
+    width: 150px;
+    height: 170px;
+    z-index: 10;
+    padding: 0px 30px;
+    transition: none;
+    right: 0px;
+    opacity: 0.8;
+    top: 56px;
+    border-radius: 4px;
+
+    @include max-screen( $screen-md ) {
+        width: 84%;
+        right: 0%;
+        top: 58px;
+        border-radius: 0px 0px 4px 4px;
+    }
+}
+svg.icon-nav-triangle{
+    position: absolute;
+    bottom: 100%;
+    width: 18px;
+    height: 8px;
+    z-index: 2;
+   
+}
+
+
+.login-mobile{
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+    a{
+        @include max-screen( $screen-md ) {
+            padding: 0px 10px;
+          
+        }
+
+    }
+}
+
+#menu-mobile-div{
+    display: none;
+    @include max-screen( $screen-md ) {
+        display: block;
+    }
+
+}
+
+button#mobile-menu-hamb{
+    border: none !important;
+}

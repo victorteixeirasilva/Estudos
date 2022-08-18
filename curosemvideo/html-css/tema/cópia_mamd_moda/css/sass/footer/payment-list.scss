@@ -1,0 +1,17 @@
+.payment{
+    &__listFlexOrder{
+        display: flex;
+        align-items: center;
+        @include max-screen( $screen-ss ) {
+            display: inherit;
+            align-items: inherit;
+        }
+        h5{
+            margin-bottom: 5px;
+            margin-right: 4px;
+        }
+        img{
+            margin: 5px 10px 5px 0px;
+        }
+    }
+}

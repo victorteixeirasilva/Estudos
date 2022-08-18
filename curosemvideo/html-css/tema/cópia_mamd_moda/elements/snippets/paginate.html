@@ -1,0 +1,31 @@
+<div class="container-flex-paginate">
+    <div class="container-flex-paginate--itens search-counter">
+        {{ paginate.counter('Encontramos {:count} produto(s) em {:pages} p&aacute;gina(s)') }}
+    </div>
+    
+    <div class="container-flex-paginate--itens paginate">
+    {% if paginate.params.pageCount > 1 %}
+        {{ paginate.first('Primeira', {'class': 'paginate--page-first '}) }}
+     
+        {% if paginate.hasPrev %}
+            {{ paginate.prev('Página Anterior', {'class': 'paginate--page-prev '}) }}
+        {% endif %}
+     
+        {{ paginate.numbers({
+            'modulus': 5,
+            'separator': '',
+            'class': 'page-link',
+            'currentClass': 'page-current'
+        }) }}
+
+      
+     
+        {% if paginate.hasNext %}
+            {{ paginate.next('Próxima Página', {'class': 'paginate--page-next '}) }}
+        {% endif %}
+     
+        {{ paginate.last('Última', {'class': 'paginate--page-last '}) }}
+    {% endif %}
+    
+    </div>
+</div>

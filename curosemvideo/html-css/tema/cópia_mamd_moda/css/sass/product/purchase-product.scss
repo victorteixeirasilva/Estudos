@@ -1,0 +1,25 @@
+#bt_comprar{
+    width: 40%;
+    @include max-screen( $screen-md ) {
+        width: 90%;
+    }
+}
+.remove-bg{
+    .botao-commerce.botao-comprar{
+        width: 100%;  
+        border: none;
+        border-radius:10px;
+        height: 60px;
+        margin: 0px;
+        background-image: initial;
+    }
+
+}
+
+.botao-comprar .botao-commerce-img {
+    background-image: initial;
+    padding: 10px;
+    font-size: 22px;
+}
+
+

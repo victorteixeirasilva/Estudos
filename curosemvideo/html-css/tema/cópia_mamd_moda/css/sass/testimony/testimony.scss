@@ -1,0 +1,72 @@
+.dep_lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px 20px;
+}
+
+.dep_item{
+    margin: 10px;
+    width: 25%;
+    padding: 10px;
+    height:150px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 40px 0 rgba(0,0,0,.2);
+    box-shadow: 0 10px 40px 0 rgba(0,0,0,.2);
+   
+    @include max-screen( $screen-md ) {
+        width: 40%;
+    }
+    @include max-screen( $screen-ss ) {
+        width: 100%;
+        height: 164px;
+    }
+
+}
+.dep_nome span,.dep_nota, .dep_msg span, .dep_data{
+    display: none;
+   
+}
+
+.dep_nome {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.dep_msg {
+    text-align: center;
+
+}
+
+.dep_link {
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.dep_link a, .dep_link a:visited{
+    font-size: 14px;
+    width: 220px;
+    text-align: center;
+  
+    border-radius: 3px;
+    padding: 10px;
+
+    @include max-screen( $screen-xs ) {
+        width: 90%;
+    }
+}
+
+.dep_dados{
+    @include max-screen( $screen-ss ) {
+        text-align: center;
+    }
+}
+
+h5.depoiments{
+    text-align: center;
+    margin: 25px 0;
+    font-size: 24px;
+}

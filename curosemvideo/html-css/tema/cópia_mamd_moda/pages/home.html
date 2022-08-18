@@ -1,0 +1,329 @@
+{% set txtNull = "Nenhum texto cadastrado" %}
+
+{% if settings.structureBannerRules == 'positionrules01' %}
+{% if settings.bannerInfoHome == 'on' %}
+
+    {% element 'snippets/banner-info' {
+        'inpDiscountsBannerInfo' : settings.inputBannerInfoDiscounts != '' ? settings.inputBannerInfoDiscounts : txtNull,
+        'inpPaymentsBannerInfo' : settings.inputBannerInfoPayments != '' ? settings.inputBannerInfoPayments : txtNull,
+        'inpSecurityBannerInfo' : settings.inputBannerInfoSecurity != '' ? settings.inputBannerInfoSecurity : txtNull,
+        'inpShippingBannerInfo' : settings.inputBannerInfoShipping != '' ? settings.inputBannerInfoShipping : txtNull,
+        'inpSuportBannerInfo' : settings.inputBannerInfoSuport != '' ? settings.inputBannerInfoSuport : txtNull
+    } %}
+
+{% endif %}
+{% endif %}
+
+
+{% if settings.searchbrandmodel == 'on' %}
+
+{% element 'snippets/filtersAjax' %}
+
+{% endif %}
+
+{% if settings.bannerExtra01 == 'on' %}
+
+    {% if settings.structureBannerExtra01 == 'full' %}
+        <div class="bannerExtraFlex">
+                <div class="bannerExtraFlex__full">
+                    {{ banner.extra1 }}	
+                </div>
+        </div>
+    {% elseif settings.structureBannerExtra01 == 'double'  %}
+    <div class="bannerExtraFlex">
+        <div class="bannerExtraFlex__double">
+            {{ banner.extra1 }}	
+        </div>
+        <div class="bannerExtraFlex__double">
+                {{ banner.extra2 }}	
+            </div>
+    </div>
+    {% else  %}
+    <div class="bannerExtraFlex">
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra1 }}	
+            
+        </div>
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra2 }}	
+           
+        </div>
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra3 }}	
+        </div>
+    </div>
+    {% endif %}
+
+{% endif %}
+
+{% if settings.structureBannerRules == 'positionrules02' %}
+{% if settings.bannerInfoHome == 'on' %}
+
+    {% element 'snippets/banner-info' {
+        'inpDiscountsBannerInfo' : settings.inputBannerInfoDiscounts != '' ? settings.inputBannerInfoDiscounts : txtNull,
+        'inpPaymentsBannerInfo' : settings.inputBannerInfoPayments != '' ? settings.inputBannerInfoPayments : txtNull,
+        'inpSecurityBannerInfo' : settings.inputBannerInfoSecurity != '' ? settings.inputBannerInfoSecurity : txtNull,
+        'inpShippingBannerInfo' : settings.inputBannerInfoShipping != '' ? settings.inputBannerInfoShipping : txtNull,
+        'inpSuportBannerInfo' : settings.inputBannerInfoSuport != '' ? settings.inputBannerInfoSuport : txtNull
+    } %}
+
+{% endif %}
+{% endif %}
+
+{% if settings.bannerExtra02 == 'on' %}
+
+    {% if settings.structureBannerExtra02 == 'full' %}
+        <div class="bannerExtraFlex">
+                <div class="bannerExtraFlex__full">
+                    {{ banner.extra4 }}	
+                </div>
+        </div>
+    {% elseif settings.structureBannerExtra02 == 'double'  %}
+    <div class="bannerExtraFlex">
+        <div class="bannerExtraFlex__double">
+            {{ banner.extra4 }}	
+        </div>
+        <div class="bannerExtraFlex__double">
+                {{ banner.extra5 }}	
+            </div>
+    </div>
+    {% else  %}
+    <div class="bannerExtraFlex">
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra4 }}	
+            
+        </div>
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra5 }}	
+           
+        </div>
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra6 }}	
+        </div>
+    </div>
+    {% endif %}
+
+{% endif %}
+
+{% if settings.structureBannerRules == 'positionrules03' %}
+{% if settings.bannerInfoHome == 'on' %}
+
+    {% element 'snippets/banner-info' {
+        'inpDiscountsBannerInfo' : settings.inputBannerInfoDiscounts != '' ? settings.inputBannerInfoDiscounts : txtNull,
+        'inpPaymentsBannerInfo' : settings.inputBannerInfoPayments != '' ? settings.inputBannerInfoPayments : txtNull,
+        'inpSecurityBannerInfo' : settings.inputBannerInfoSecurity != '' ? settings.inputBannerInfoSecurity : txtNull,
+        'inpShippingBannerInfo' : settings.inputBannerInfoShipping != '' ? settings.inputBannerInfoShipping : txtNull,
+        'inpSuportBannerInfo' : settings.inputBannerInfoSuport != '' ? settings.inputBannerInfoSuport : txtNull
+    } %}
+
+{% endif %}
+{% endif %}
+
+{% if settings.bannerCategoriesImgs == 'on' %}
+{% element 'snippets/categoriesimgs' %}
+{% endif %}
+
+
+{% set titleNUll = "Nenhum titulo cadastrado" %}
+
+{% if settings.OrderFilterProduct01 == 'name' %}
+    {% set ords1 = { 'name': 'asc' } %}
+
+{% elseif settings.OrderFilterProduct01 == 'price' %}
+    {% set ords1 = { 'price': 'asc' } %}
+
+{% elseif settings.OrderFilterProduct01 == 'quantity_sold' %}
+    {% set ords1 = { 'quantity_sold': 'asc' } %}
+
+{% endif %}
+
+
+
+{# 1 Showcase #}
+{% if settings.showcase01 == 'on' %}
+
+{% element 'showcase' {
+    'prodTitle': settings.titleShowcase01 != '' ? settings.titleShowcase01 : titleNUll,
+    'prodFilter': settings.filterShowcase01 != '' ? settings.filterShowcase01,
+
+    'prodCategories': settings.categoryFilterProduct01 != '' ? settings.categoryFilterProduct01,
+    'prodLimit': settings.limitProduct01 != '' ? settings.limitProduct01: '4',
+    'setCarousel': settings.showcaseCarrossel01 ,
+    'containerModifier': 'showcase--first'
+} %}
+{% endif %}
+
+
+
+
+{% if settings.OrderFilterProduct02 == 'name' %}
+    {% set ords2 = { 'name': 'asc' } %}
+    
+{% elseif settings.OrderFilterProduct02 == 'price' %}
+    {% set ords2 = { 'price': 'asc' } %}
+
+{% elseif settings.OrderFilterProduct02 == 'quantity_sold' %}
+    {% set ords2 = { 'quantity_sold': 'asc' } %}
+
+{% endif %}
+
+
+{% if settings.newsletterHome == 'on' %}
+
+{% element 'snippets/newsletterHome'  %}
+{% endif %}
+
+
+
+{# 2 Showcase #}
+{% if settings.showcase02 == 'on' %}
+
+{% element 'showcase' {
+    'prodTitle': settings.titleShowcase02 != '' ? settings.titleShowcase02: titleNUll ,
+    'prodFilter': settings.filterShowcase02 != '' ? settings.filterShowcase02,
+
+    'prodCategories': settings.categoryFilterProduct02 != '' ? settings.categoryFilterProduct02,
+    'prodLimit': settings.limitProduct02 != '' ? settings.limitProduct02: '4',
+    'setCarousel': settings.showcaseCarrossel02,
+    'containerModifier': 'showcase--second'
+} %}
+{% endif %}
+
+
+
+{% if settings.bannerExtra03 == 'on' %}
+
+    {% if settings.structureBannerExtra03 == 'full' %}
+        <div class="bannerExtraFlex">
+                <div class="bannerExtraFlex__full">
+                    {{ banner.extra7 }}	
+                </div>
+        </div>
+    {% elseif settings.structureBannerExtra03 == 'double'  %}
+    <div class="bannerExtraFlex">
+        <div class="bannerExtraFlex__double">
+            {{ banner.extra7 }}	
+        </div>
+        <div class="bannerExtraFlex__double">
+            {{ banner.extra8 }}	
+            </div>
+    </div>
+    {% else  %}
+    <div class="bannerExtraFlex">
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra7 }}	
+            
+        </div>
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra8 }}	
+           
+        </div>
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra9 }}	
+        </div>
+    </div>
+    {% endif %}
+
+{% endif %}
+
+
+{% if settings.OrderFilterProduct03 == 'name' %}
+    {% set ords3 = { 'name': 'asc' } %}
+    
+{% elseif settings.OrderFilterProduct03 == 'price' %}
+    {% set ords3 = { 'price': 'asc' } %}
+
+{% elseif settings.OrderFilterProduct03 == 'quantity_sold' %}
+    {% set ords3 = { 'quantity_sold': 'asc' } %}
+
+{% endif %}
+
+
+{# 3 Showcase #}
+{% if settings.showcase03 == 'on' %}
+
+{% element 'showcase' {
+    'prodTitle': settings.titleShowcase03 != '' ? settings.titleShowcase03: titleNUll ,
+    'prodFilter': settings.filterShowcase03 != '' ? settings.filterShowcase03,
+
+    'prodCategories': settings.categoryFilterProduct03 != '' ? settings.categoryFilterProduct03,
+    'prodLimit': settings.limitProduct03 != '' ? settings.limitProduct03: '4',
+    'setCarousel': settings.showcaseCarrossel03,
+    'containerModifier': 'showcase--third'
+} %}
+{% endif %}
+
+
+
+
+{% if settings.bannerExtra04 == 'on' %}
+
+    {% if settings.structureBannerExtra04 == 'full' %}
+        <div class="bannerExtraFlex">
+                <div class="bannerExtraFlex__full">
+                    {{ banner.extra10 }}	
+                </div>
+        </div>
+    {% elseif settings.structureBannerExtra04 == 'double'  %}
+    <div class="bannerExtraFlex">
+        <div class="bannerExtraFlex__double">
+            {{ banner.extra10 }}	
+        </div>
+        <div class="bannerExtraFlex__double">
+                {{ banner.extra11 }}	
+            </div>
+    </div>
+    {% else  %}
+    <div class="bannerExtraFlex">
+        <div class="bannerExtraFlex__triple">
+            {{ banner.extra10 }}	
+            
+        </div>
+        <div class="bannerExtraFlex__triple">
+           
+            {{ banner.extra11 }}	
+           
+        </div>
+        <div class="bannerExtraFlex__triple">
+           
+            {{ banner.extra12 }}	
+        </div>
+    </div>
+    {% endif %}
+
+{% endif %}
+
+{% if settings.bannerBrand  == 'on' %}
+
+ {% element 'snippets/banner-brand'  %}
+ {% endif %}
+
+
+
+
+{% if settings.storeClientsDepoiments == 'on' %}
+<h5 class="depoiments">Depoimentos dos Clientes</h5>
+{% element 'CustomerReview.reviews' %}
+
+{% endif %}
+
+{% if settings.storeNews == 'on' %}
+{% element 'News.news' %}
+{% endif %}
+
+
+
+{% if settings.showcaseImgs3 == 'on' %}
+<script type="text/javascript" src="{{ asset('js/modules/imgsChange.min.js') }}"></script>
+{% endif %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+
+{% if settings.searchbrandmodel == 'on' %}
+<script  type="text/javascript" src="{{ asset('js/apiproduct.js') }}"></script>
+
+{% endif %}
+
+<script type="text/javascript" src="{{ asset('js/swiper2.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('js/modules/brandcarrossel.js') }}"></script>

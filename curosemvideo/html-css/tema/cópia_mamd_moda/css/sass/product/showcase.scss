@@ -1,0 +1,113 @@
+.showcase {
+    position: relative;
+   
+
+    &__container-flex-product-category{
+        display: flex;
+        flex-wrap: wrap;
+      
+    
+        &__item-category{
+            width: 32%;
+            padding: 2px;
+           
+            @include max-screen( $screen-md ) {
+                width: 49%;
+            }
+            @include max-screen( $screen-xs ) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__label {
+        text-align: center;
+        margin: 30px auto 30px;
+
+        @include max-screen( $screen-sm ) {
+            max-width: 98%;
+            margin: 0 auto 30px;
+        }
+    }
+    &__title {
+       
+        font-size: 30px;
+        font-weight: 800;
+
+        @include max-screen( $screen-sm ) {
+            display: block;
+           
+            margin: 0 auto 10px;
+            font-size: 24px;
+        }
+    }
+    &__subtitle {
+        display: inline-block;
+        vertical-align: middle;
+       
+
+        @include max-screen( $screen-sm ) {
+            display: block;
+           
+            margin: 0 auto;
+            font-size: 18px;
+        }
+    }
+    &__content {
+        width: 100%;
+        max-width: 99%;
+        margin: 0 auto;
+
+      
+
+        &.container-flex-product-category{
+                    display: flex;
+                    flex-wrap: wrap;
+        }
+        
+    }
+    &__list {
+        text-align: center;
+    }
+    &__item {
+        display: inline-block;
+        width: 20% ;
+        vertical-align: top;
+        text-align: left;
+
+        @include max-screen( $screen-sm ) {
+            width: 25%;
+        }
+        @include max-screen( 992px ) {
+            width: 33%;
+        }
+        @include max-screen( $screen-ss ) {
+            width: 50%;
+        }
+
+        &.item-category{
+            width: 20%;
+           
+           
+            @include max-screen( $screen-md ) {
+                width: 49%;
+            }
+            @include max-screen( $screen-xs ) {
+                width: 100%;
+            }
+        }
+    }
+   
+
+    &__bullets {
+        .swiper-pagination-bullet-active {
+            background-color: #2c2c2c;
+        }
+    }
+    
+}
+    
+.swiper-container .swiper-notification {
+width: 30px;
+height: 30px;
+ }

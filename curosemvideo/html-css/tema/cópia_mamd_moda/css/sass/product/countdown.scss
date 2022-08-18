@@ -1,0 +1,44 @@
+.flexCountdwn{
+    justify-content: center;
+    display: flex;
+    padding: 4px;
+
+    &--itens{
+    padding: 4px;
+    border-radius: 5px;
+    margin: 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    }
+}
+h6.countdownTitle{
+    margin: 0;
+    text-align: center;
+}
+
+
+
+.flexCountdwn2{
+    
+    display: flex;
+    padding: 4px 0px;
+    margin-bottom: 18px;
+
+    &--itens2{
+    padding: 4px;
+    border-radius: 5px;
+    margin: 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    }
+
+    @include max-screen( $screen-md ) {
+        justify-content: center;
+    }
+}
+h6.countdownTitle2{
+    margin: 0;
+    @include max-screen( $screen-md ) {
+        text-align: center;
+    }
+}

@@ -1,0 +1,41 @@
+<div class="container-dropdown-search">
+
+<ul class="level11" data-tray-tst="categoria">
+    {% for level1 in categories %}
+    <div class="container-dropdown-search__itens-dropdown">
+
+            <li class="item-level1 ">
+                <a href="{{ level1.link }}" class="link-level11" data-tray-tst="categoria_lvl_1">
+                    <span>{{ level1.name }}</span>
+                    
+                {% if level1.children  %}
+                        {% for level2 in level1.children %}
+
+                        <li class="item-level22">
+                            
+                                <a href="{{ level2.link }}" class="link-level22" data-tray-tst="categoria_lvl_2">
+                                 <span>{{ level2.name }}</span>
+                                </a>
+
+                             
+                             {% if level2.children  %}
+                            
+                                {% for level3 in level2.children %}
+                                    <li class="item-level33">
+                                         <a href="{{ level3.link }}" class="link-level33" data-tray-tst="categoria_lvl_3">
+                                             <span>{{ level3.name }}</span></a>
+                                    </li>
+                                {% endfor %}
+
+                            {% endif %}
+                        </li>
+                  
+                    {% endfor %}
+                {% endif %}
+            </li>
+        </div>
+
+    {% endfor %}
+
+</ul>
+</div>

@@ -1,0 +1,31 @@
+#quantidade {
+    width: 30%;
+    font-size: 20px;
+    margin: 15px 0;
+    padding: 0px;
+    border: none;
+    @include max-screen( $screen-md ) {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.color{
+    input{
+        &#quant{
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            border: none;
+            text-align: center;
+            font-weight: 600;
+            background-color: rgb(85, 163, 231);
+            
+            @include max-screen( $screen-md ) {
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+}
+   

@@ -1,0 +1,191 @@
+#ProdAbas{
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+
+    @include max-screen( $screen-md ) {
+        flex-direction: column;
+    }
+    .clearfix{
+        @include max-screen( $screen-md ) {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    a{
+        background-image: none;
+        border-radius: 6px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin: 0 5px 10px 5px;
+
+      
+    }
+
+    li{
+        padding:0px;
+        background: none !important;
+        margin: 0 10px;
+        text-align: center;
+    }
+
+    .aberta a {
+        background-image:none;
+       
+        border-radius: 6px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        @include max-screen( $screen-md ) {
+            margin:10px;
+        }
+
+       
+       
+    }
+
+}    
+
+.container-tabs{
+    margin: 0 auto;
+    width: 96%;
+    max-width: 1200px;
+    font-size: 16px;
+}
+
+#descricao{
+    .board{
+        @extend .container-tabs;
+
+        width: initial;
+    } 
+}
+#itensInclusos{
+    .board{
+        @extend .container-tabs;
+
+    }  
+}
+
+#coments{
+
+    margin-top: 80px;
+
+    @include max-screen( $screen-ss ) {
+       
+        margin-top: 280px;
+     }
+    .board{
+        @extend .container-tabs;
+
+    }  
+}
+
+#caracteristicas{
+    .board{
+        @extend .container-tabs;
+    
+    }  
+
+}
+
+#garantia{
+   
+    .board{
+        @extend .container-tabs;
+
+        .board_htm.description{
+            margin-top: -200px;
+            width: 100%;
+
+            @include max-screen( $screen-ss ) {
+                margin-top: 0px;
+                padding-top:200px;
+             }
+
+            
+
+        }
+
+    }
+}
+
+#formasPagto{
+
+    margin-top: 30px;
+    
+    .board{
+        @extend .container-tabs;
+        @include max-screen( $screen-ss ) {
+           width: initial;
+        }
+
+        
+    }
+
+    @include max-screen( $screen-ss ) {
+       
+        margin-top: 230px;
+
+     }
+}
+
+.tablePags {
+   
+    border:none;
+}
+
+.Forma1 {
+    
+   
+    li {
+        background-image:none;
+       
+
+        &:hover {
+            background-image:none;
+         
+            
+        }
+
+    }
+}
+
+#linkPagParcelado{
+    display: flex;
+    justify-content: center;
+   
+    border: 1px solid rgb(19, 18, 18);
+}
+
+#ProdBlock{
+    background-image:none;
+       
+}
+
+
+.descriptionProduct{
+  
+    p{
+
+        padding-top: 40px !important;
+        margin:0px 10px !important;
+
+        @include max-screen( $screen-ss ) {
+       
+        padding-top: 210px !important;
+
+        }
+       
+
+    }
+
+}
+

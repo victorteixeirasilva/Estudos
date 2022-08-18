@@ -1,0 +1,172 @@
+ .container3{
+    border: none !important;
+    background-color: aquamarine !important;
+    background-image: none !important;
+ }
+
+ .container2 {
+    background-image: none !important;
+ }
+
+ .bottom {
+    background-image: none !important;
+
+ }
+
+ .bLeft {
+    background-image: none !important;
+ }
+
+ .bRight {
+    background-image: none !important;
+
+}
+
+.board{
+    h1.color{
+        text-align: center;
+    }
+}
+
+
+.comparator {
+    overflow-x: auto;
+    width: 100% ;
+    ul{
+       
+        background-color: #ffffff;
+        @include max-screen( $screen-sm ) {
+            width: 980px;
+           
+
+        }
+
+        .Labels {
+            @include max-screen( $screen-sm ) {
+                width: 119px;
+                overflow: inherit;
+            }
+            ul {
+                .comparsionFoto{
+                    background: none ;
+                }
+
+                li{
+                    background: none ;
+                }
+            }
+
+        }
+        
+        li {
+            @include max-screen( $screen-sm ) {
+                width: 21%;
+            }
+
+            ul {
+
+                @include max-screen( $screen-sm ) {
+                    width: 100%;
+           
+                }
+                .comparsionInfoPreco{
+                background: none ;
+                font-size: 14px !important;
+                height: 120px !important;
+                    br{
+                        display: none !important;
+                    }
+
+                
+                   
+                }
+
+
+                li{
+                    width: 100% ;
+                    padding: 6px 0px ;
+                    text-align: center ;
+                    height: 100px ;
+                }
+
+
+                
+
+                .comparsionRate{
+                    background: none ;
+                }
+
+               .comparsionDescricao{
+                    background: none ;
+                }
+                .precoAvista, .precoparc{
+                    font-size: 16px;
+                    br {
+                        display: none;
+                    }
+                }
+
+                li {
+                    @include max-screen( $screen-sm ) {
+                      
+                        padding: 10px 0px;
+                        overflow: inherit;
+            
+                    }
+                }
+            }
+            
+        }
+
+       
+    }
+    
+
+}
+
+
+.comparatorTabs{
+
+ li {
+    background-image: none !important;
+    background-color: #9a9a9a !important;
+    border-radius: 3px !important;
+    color: aliceblue;
+    margin: 0px !important; 
+    padding: 0px !important; 
+    top: 0px !important;
+
+    @include max-screen( $screen-sm ) {
+        width: 100%;
+    }
+
+    }
+    .closeCat {
+        border: none !important;
+    
+    }
+
+    a {
+        background-image: none !important;
+    }
+
+    ul {
+        border: none !important;
+    }
+    
+
+}
+
+.ranking.hreview-aggregate{
+    height: 42px !important;
+}
+.displayRate{
+    display: inherit !important;
+}
+
+.displayModelo {
+    display: inherit !important;
+}
+.displayGarantia {
+    display: inherit !important;
+}

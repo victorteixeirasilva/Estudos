@@ -1,0 +1,46 @@
+.banner-info-flex{
+    display: flex;
+    margin-top: -9px;
+    
+    justify-content: space-around;
+    @include max-screen( $screen-sm ) {
+
+        overflow-x: auto;
+        justify-content: initial;
+
+    }
+    &__itens{
+        padding: 5px 10px;
+        width: 20%;
+        height: 96px;
+        @include max-screen( $screen-sm ) {
+
+            width: inherit;
+            height: inherit;
+         }
+
+  
+        &--flex{
+            display: flex;
+            flex-direction: column;
+            align-items: center;           
+            @include max-screen( $screen-sm ) {
+
+               width: 200px;
+        
+            }
+             p{
+                 margin: 0 0 10px 0;
+                 line-height: 12px;
+                 text-align: center;
+             }
+
+            svg{
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+    }
+}
+

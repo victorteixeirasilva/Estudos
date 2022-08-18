@@ -1,0 +1,48 @@
+html{
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.87;
+    font-display: swap;
+}
+body{
+    margin: 0px; 
+}
+header{
+    padding: 0px 0;
+}
+.container{
+    margin: 0 auto;
+    width: 96%;
+    max-width: 1280px;
+    background-image: inherit;
+}
+
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+li {
+list-style-type: none;
+}
+
+a{
+text-decoration: none;   
+}
+
+p {
+     border-bottom: none;
+     padding: 0;
+     position: relative; 
+   
+}
+
+
+
+.board_htm.description{
+    padding-top: 178px
+}

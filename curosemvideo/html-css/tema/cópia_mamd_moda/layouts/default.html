@@ -1,0 +1,149 @@
+{% spaceless %}
+<!doctype html>
+<html lang="pt-br" id="agenciamamdpopup" data-store="{{ store.id }}" class="page-{{ pages.current }}" data-protocol="{{ utils.is_https ? 'https' : 'http' }}">
+
+<head>
+ 
+     <!-- tray charset -->
+     {{ html.charset() }}
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     {{ tray.meta }}
+
+ 
+     <!-- tray styles -->
+     {{ tray.styles }}
+ 
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="{{ asset('css/slide/swiper.min.css') }}" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="{{ asset('css/thememamd.min.css') }}" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="{{ asset('css/custom.css', {dynamic: true}) }}" as="style" onload="this.rel='stylesheet'">
+
+    {% if pages.current in ['catalog', 'search'] %}
+    <link rel="stylesheet" href="{{ asset('css/slide/slider.min.css') }}" type="text/css">
+    {% endif %}
+
+   
+
+    <!-- tray analytics -->
+    {{ tray.analytics }}
+
+    <!-- 2 google tag manager -->
+    {{ googleTagManager.header(pages.current, tagManagerData) }}
+</head>
+<body>
+
+
+  
+
+    <div class="site">
+    {% if pages.current in ['home'] %}
+    {% if settings.popupexit == 'on' %}
+
+        {% element 'popupnews' %}
+            <script type="text/javascript" src="{{ asset('js/modules/popuppro.js') }}"></script>
+            
+    {% endif %}
+    {% endif %}
+
+
+        {% element 'header' %}
+
+        {% if pages.current == 'home' %}
+            {% if not utils.is_mobile %}
+                {% element 'snippets/banner-home' {
+                    'banner_class': 'banner--home',
+                    'banner_local': 'home'
+                } %}
+            {% else %}
+                {% element 'snippets/banner-home' {
+                    'banner_class': 'banner--extra1',
+                    'banner_local': 'extra1'
+                } %}
+            {% endif %}
+        {% endif %}
+
+       
+      
+        <main class="main" role="main">
+            <div class="page-content">
+                {% if 'central_' in pages.current %}
+                    {% element 'snippets/central-widget' %}
+
+                    <section class="central-content">
+                        {{ content_for_layout }}
+                    </section>
+                {% else %}
+                    {{ content_for_layout }}
+                {% endif %}
+            </div>
+        </main>
+
+
+        {% element 'snippets/whatsapp' %}
+
+
+        {% element 'footer' %}
+    </div>
+
+    <!-- Tray essentials -->
+    {% element 'snippets/modal' %}
+
+    {{ googleTagManager.bottom(pages.current, tagManagerData) }}
+
+    {{ tray.scripts }}
+
+    {% if pages.current != 'login' %}
+        {% if not utils.is_mobile %}
+            {% element 'snippets/tray_login' %}
+        {% endif %}
+    {% endif %}
+
+    {{ html.script({
+        '0' : tray.paths.js ~ 'dist/application.min.js?' ~ utils.assets_version,
+        '1' : tray.paths.js ~ 'init.js?' ~ utils.assets_version
+        })
+    }}
+
+
+
+    {% element 'snippets/pageview' %}
+
+    {{ store.chat }}
+
+
+    
+    {% if settings.securityLgpdBanner == 'on' %}
+    {% element 'snippets/lgpd' %}
+    <script type="text/javascript" src="{{ asset('js/modules/lgpd.min.js') }}"></script>
+
+    {% endif %}
+    <!-- theme scripts-->
+    <script type="text/javascript" src="{{ asset('js/swiper.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lazy.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modules/banner.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modules/showcase.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modules/carts.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modules/login.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modules/filter.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modules/apiCarts.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modules/header.js') }}"></script>
+    
+  
+
+
+    {% if settings.showcaseCountdown == 'on' %}
+    <script type="text/javascript" src="{{ asset('js/modules/countdown.min.js') }}"></script> 
+
+    {% endif %}
+
+</body>
+</html>
+{% endspaceless %}
+
+
+

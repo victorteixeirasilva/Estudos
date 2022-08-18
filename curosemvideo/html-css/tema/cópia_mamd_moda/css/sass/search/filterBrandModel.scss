@@ -1,0 +1,78 @@
+.searchApi{
+
+    &--containerFlex{
+        display: flex;
+       
+        padding: 20px 0px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+        margin-bottom: 40px;
+
+        h4{
+            font-size: 18px;
+          
+
+            @include max-screen( $screen-xs ) {
+                text-align: center;
+            }
+    
+        }
+
+        @include max-screen( $screen-xs ) {
+            flex-direction: column;
+        }
+
+        &--itens{
+           
+            margin: 0px 5px;
+           
+            border-radius: 6px;
+            padding: 0px 15px 0px 0px;
+
+            @include max-screen( $screen-xs ) {
+                margin: 10px 5px;  
+                text-align: center;
+               
+
+            }
+    
+
+            label{
+
+                font-weight: 600;
+                font-size: 14px; 
+                padding: 5px 10px;
+               
+  
+            }
+        }
+
+        select{
+            padding: 5px 10px;
+            font-size: 14px;
+            border:none;
+
+            @include max-screen( $screen-xs ) {
+                width: 270px;
+            }
+           
+        }
+        button{
+            border:none;
+            border-radius: 6px;
+            font-weight: 400;
+            font-size: 15px;
+            padding: 14px 24px;
+
+          
+
+            @include max-screen( $screen-xs ) {
+                padding: 10px;
+                margin: 0 5px;
+            }
+
+        }
+
+    }
+}

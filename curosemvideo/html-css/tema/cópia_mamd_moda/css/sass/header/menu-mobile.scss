@@ -1,0 +1,64 @@
+.menu-mobile-flex{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    top: 58px;
+    padding: 10px 20px;
+
+    h5{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__categories{
+        &--level1{
+           
+            &__item-level1{
+                display: flex;
+                align-items: center;
+
+                &--itens2{
+                    padding: 0px 10px;
+
+                  }
+                  &--itens3{
+                    flex: 1;
+
+                  }
+               
+                &--categorie-header-mobile{
+                    max-width: 30px;
+                    max-height: 30px;
+                    border-radius: 3px;
+                }
+
+                &--arrow-menu-mobile{
+                    svg{
+                        width: 15px;
+                        height: 15px;
+                        float: right;
+                    }
+                }
+            }
+        }
+
+        &--level2{
+            display: none;
+            visibility: hidden;
+           
+        }
+
+
+     
+    }
+    
+}
+
+.close-menu-mobile{
+   svg{
+    fill:#000;
+    width: 20px;
+    height: 20px;
+    margin-left: 98%;
+   }
+}

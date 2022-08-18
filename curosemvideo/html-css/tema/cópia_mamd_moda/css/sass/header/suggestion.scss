@@ -1,0 +1,9 @@
+.suggestion{
+   
+    border: 6px solid #fbfbfb;
+    @include max-screen( $screen-md ) {
+        max-width: inherit;
+        min-width: 90%;
+     }
+}
+

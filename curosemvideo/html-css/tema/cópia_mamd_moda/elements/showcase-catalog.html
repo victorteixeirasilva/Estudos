@@ -1,0 +1,17 @@
+<div class="showcase__content {{ setCarousel ? 'swiper-container' }}">
+            {% if products|length > 0 %}
+                <ul class="showcase__container-flex-product-category">
+                    {% for product in products %}
+                        {% set ranking = product.ranking %}
+                    
+                        <li class="showcase__container-flex-product-category__item-category">
+                                {% element 'snippets/pageproduct' {"product": product} %}
+                        </li>
+                              
+                           
+                    {% endfor %}
+                </ul>
+    
+            {% endif %}
+</div>
+

@@ -1,0 +1,44 @@
+<div class="container">
+<section class="showcase {{ containerModifier ? containerModifier }}" itemscope itemtype="https://schema.org/SomeProducts">
+    <div class="showcase__label">
+        <h3 class="showcase__title">{{ prodTitle }}</h3>
+    </div>
+
+
+
+    {% set products = Products({
+        'filter': prodFilter,
+        'limit': prodLimit
+
+    }) %}
+ 
+    <div class="showcase__content {{ setCarousel ? 'swiper-container': 'container-flex-product-category' }}">
+            {% if products|length > 0 %}
+                <ul class="showcase__list {{ listModifier ? listModifier : 'showcase__list--' ~ pages.current }} {{ setCarousel ? 'swiper-wrapper' }}">
+                    {% for product in products %}
+                        <li class="showcase__item {{ setCarousel ? 'swiper-slide': 'item-category' }}">
+
+                            {% element 'snippets/product' {
+                                'product': product,
+                                'setCarousel': setCarousel
+                            } %}
+                        </li>
+                    {% endfor %}
+                </ul>
+    
+
+                    {% if setCarousel == 'on' %}
+                        <div class="showcase__bullets swiper-pagination"></div>
+                            <div class="showcase__button showcase__button--prev swiper-button-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44" width="30" height="30"><path d="M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z"></path></svg>
+                            </div>
+                            <div class="showcase__button showcase__button--next swiper-button-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44" width="30" height="30"><path d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z"></path></svg>                    
+                            </div>
+                    {% endif %}
+
+                
+            {% endif %}
+        </div>
+    </section>
+</div>

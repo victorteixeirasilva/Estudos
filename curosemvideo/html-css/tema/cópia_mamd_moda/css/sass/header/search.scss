@@ -1,0 +1,70 @@
+.search{
+    width: 100%;
+    &__mobile{
+        display: none;
+
+        @include max-screen( $screen-sm ) {
+            display: block;
+            
+         }
+         input{
+            &.search-key{
+                @include max-screen( $screen-sm ) {
+                height: 36px;
+                width: 100%;
+                align-items: center;
+                border-radius: 0px 0px 3px 0px;
+                z-index: 1;
+                border: 0px;
+                }
+            }
+         }
+
+
+         button{
+            &.search-button-right{
+                @include max-screen( $screen-sm ) {
+                 border: none;
+                 height: 38px;
+                }
+
+                svg{
+                    @include max-screen( $screen-sm ) {
+                        fill: red;
+                       }
+                }
+            }
+
+        }
+
+
+    }
+
+    form{
+       
+        border-bottom: solid 1px;
+    }
+
+    input{
+        &.search-key{
+            height: 36px;
+            width: 100%;
+            align-items: center;
+            border-radius: 3px 0px 0px 3px;
+            z-index: 1;
+            border: 0px;
+        }
+    }
+    button{
+        &.search-button-right{
+             border: none;
+        }
+    }
+    
+}
+
+.container-search-flex{
+    display: flex;
+    align-items: center;
+}
+
