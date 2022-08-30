@@ -23,11 +23,14 @@
     <p>
         Aprendendo a usar <strong>DOM</strong> em JavaScript.
     </p>
-    <div>
+    <div id="msg">
         Clique em mim
     </div>
     <script>
-        
+        let corpo = window.document.body
+        let p1 = window.document.getElementsByTagName('p')[0]
+        let d = window.document.getElementById('msg')
+        d.style.color = 'blue'
     </script>
 </body>
 </html>
