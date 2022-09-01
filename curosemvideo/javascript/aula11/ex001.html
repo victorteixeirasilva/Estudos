@@ -5,9 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DERTRAN</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font: 30px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        #centro {
+            background-color: white;
+            padding: 100px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 50px;
+            box-shadow: 5px 5px 5px 6px rgba(0, 0, 0, 0.136);
+        }
+        #mul{
+            color: red;
+        }
+
+    </style>
 </head>
 <body>
-    <div>
+    <div id="centro">
         <h1>
             Sistema de Multas
         </h1>
@@ -24,7 +44,7 @@
             let res = window.document.getElementById('res')
             res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h.</strong></p>`
             if(vel>60){
-                res.innerHTML += `<p>Você está acima do limite de velocidade de <strong>60km/h</strong> e será <strong>MULTADO</strong></p>`
+                res.innerHTML += `<p>Você está acima do limite de velocidade de <strong>60km/h</strong> e será <strong id="mul">MULTADO</strong></p>`
             }     
         }
     </script>
