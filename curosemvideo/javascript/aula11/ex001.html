@@ -23,6 +23,22 @@
         #mul{
             color: red;
         }
+        #but {
+            background-color: aquamarine;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: 0px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.177);
+        }
+        #but:hover {
+            padding: 15px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
 
     </style>
 </head>
@@ -32,7 +48,7 @@
             Sistema de Multas
         </h1>
         Velocidade do carro: <input type="number" name="txtvelo" id="txtvel">
-        <input type="button" value="Verificar" onclick="calcular()">
+        <input id="but" type="button" value="Verificar" onclick="calcular()">
         <div id="res">
             resultado...
         </div>
