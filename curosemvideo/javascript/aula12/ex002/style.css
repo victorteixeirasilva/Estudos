@@ -21,6 +21,10 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.476);
 }
 
+foto {
+    margin: auto;
+}
+
 footer {
     margin: 20px;
     color: white;
