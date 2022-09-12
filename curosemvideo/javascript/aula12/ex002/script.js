@@ -13,9 +13,36 @@ function verificar() {
         img.setAttribute('id', 'foto');
         if(fsex[0].checked) {
             genero = 'Homem';
+            if (idade >= 0 && idade < 10){
+                //Criança
+                img.setAttribute('src', 'bb-m.png');
+            } else if (idade < 21){
+                //Jovem
+                img.setAttribute('src', 'jovem-m.png');
+            } else if (idade < 50){
+                //Adulto
+                img.setAttribute('src', 'adulto-m.png');
+            } else {
+                //Idosos
+                img.setAttribute('src', 'idoso-m.png');
+            }
         } else if (fsex[1].checked) {
             genero = 'Mulher';
+            if (idade >= 0 && idade < 10){
+                //Criança
+                img.setAttribute('src', 'bb-f.png');
+            } else if (idade < 21){
+                //Jovem
+                img.setAttribute('src', 'jovem-f.png');
+            } else if (idade < 50){
+                //Adulto
+                img.setAttribute('src', 'adulto-f.png');
+            } else {
+                //Idosos
+                img.setAttribute('src', 'idoso-f.png');
+            }
         }
-        res.innerHTML = ` Detectamos ${genero} de ${idade} anos.`
+        res.innerHTML = ` Detectamos ${genero} de ${idade} anos.`;
+        res.appendChild(img);
     }
 }
