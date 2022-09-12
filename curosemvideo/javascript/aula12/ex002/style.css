@@ -21,7 +21,28 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.476);
 }
 
-foto {
+#btnveri {
+    background-color: rgb(92, 214, 255);
+    font: normal 15px Arial, Helvetica, sans-serif;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.29);
+}
+
+#btnveri:hover {
+    background-color: white;
+    font: normal 20px Arial, Helvetica, sans-serif;
+    padding: 10px 15px 10px 15px;
+    color: rgb(92, 214, 255);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.29);
+    transition: 0.5s;
+}
+
+#foto {
     margin: auto;
 }
 
