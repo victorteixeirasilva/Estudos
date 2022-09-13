@@ -14,20 +14,22 @@
         </h1>
     </header>
     <section>
-        <div>
+        <div id="dados">
             <p>
-                Início: <input type="number" name="" id="">
+                Início: <input type="number" name="inicio" id="txti">
             </p>
             <p>
-                Fim: <input type="number" name="" id="">
+                Fim: <input type="number" name="fim" id="txtf">
             </p>
             <p>
-                Passo: <input type="number" name="" id="">
+                Passo: <input type="number" name="passo" id="txtp">
             </p>
-            <input id="btn" type="button" value="Contar">
+            <input id="btn" type="button" value="Contar" onclick="contar()">
         </div>
         <div>
-
+            <p id="res">
+                resultado...
+            </p>
         </div>
     </section>
     <footer>
