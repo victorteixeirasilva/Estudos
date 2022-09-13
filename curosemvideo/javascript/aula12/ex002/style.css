@@ -21,7 +21,7 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.476);
 }
 
-#btnveri {
+#btn {
     background-color: rgb(92, 214, 255);
     font: normal 15px Arial, Helvetica, sans-serif;
     padding: 5px 10px 5px 10px;
@@ -31,7 +31,7 @@ section {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.29);
 }
 
-#btnveri:hover {
+#btn:hover {
     background-color: white;
     font: normal 20px Arial, Helvetica, sans-serif;
     padding: 10px 15px 10px 15px;
