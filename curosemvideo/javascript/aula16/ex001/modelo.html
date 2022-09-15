@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MODELO EX</title>
+    <title>Analisador de Números</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>
-            Título
+            Analisador de Números
         </h1>
     </header>
     <section>
         <div>
-            testeeeeee
+        <p>
+            Número (entre 1 e 100):
+            <input type="number" name="fnum" id="fnum">
+            <input id="btn" type="button" value="adicionar" onclick="adicionar()"> <br>
+        </p>
+        <p>
+            <select name="flista" id="flista" size="6"></select> <br>
+            <input id="btn" type="button" value="Finalizar" onclick="finalizar()">
+        </p>
         </div>
-        <div>
+        <div id="res">
 
         </div>
     </section>
