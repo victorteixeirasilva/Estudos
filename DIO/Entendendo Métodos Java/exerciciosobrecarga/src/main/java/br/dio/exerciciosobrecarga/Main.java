@@ -24,17 +24,17 @@ public class Main {
 		escolha = opcao.nextInt();
 		
 		if (escolha == 1) { //Quadrado
-			area.quadrado(3, 3);
-			area.quadrado(5, 5);
-			area.quadrado(10, 10);
+			area.area(3);
+			area.area(5);
+			area.area(10);
 		} else if (escolha == 2) { // Retângulo
-			area.retangulo(3, 5);
-			area.retangulo(5, 3);
-			area.retangulo(10, 5);
+			area.area(3, 5);
+			area.area(5, 3);
+			area.area(10, 5);
 		} else if (escolha == 3) { // Trapézio
-			area.trapezio(10, 5, 4);
-			area.trapezio(15, 10, 9);
-			area.trapezio(20, 15, 14);
+			area.area(10, 5, 4);
+			area.area(15, 10, 9);
+			area.area(20, 15, 14);
 		} else {
 			System.out.println("Erro.Você é burro? ou se faz? é opção 1, 2 ou 3...");
 		}

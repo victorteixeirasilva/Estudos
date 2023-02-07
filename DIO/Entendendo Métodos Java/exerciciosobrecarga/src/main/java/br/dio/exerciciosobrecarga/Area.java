@@ -30,19 +30,18 @@ public class Area {
 		this.altura = altura;
 	}
 	
-	public void quadrado (int base, int altura) {
+	public void area (int base) {
 		this.base = base;
-		this.altura = altura;
-		int resultado = base*altura;
+		int resultado = base*base;
 		System.out.println("A area desse quadrado é: "+resultado);
 	}
-	public void retangulo (int base, int altura) {
+	public void area (int base, int altura) {
 		this.base = base;
 		this.altura = altura;
 		int resultado = base*altura;
 		System.out.println("A area desse retangulo é: "+resultado);
 	}
-	public void trapezio (int base1,int base2, int altura) {
+	public void area (int base1,int base2, int altura) {
 		this.base = base1;
 		this.base2 = base2;
 		this.altura = altura;
