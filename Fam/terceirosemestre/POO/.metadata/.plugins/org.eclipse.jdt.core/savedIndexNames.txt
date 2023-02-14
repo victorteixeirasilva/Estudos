@@ -1,0 +1,13 @@
+INDEX VERSION 1.131+/home/vitin.teixx/Área de Trabalho/--/Bk/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+3170001713.index
+1865797976.index
+643952183.index
+4180794551.index
+1542574690.index
+1042862965.index
+4283738441.index
+1206651944.index
+830358489.index
+2042766506.index
+283565351.index
+3708272180.index
