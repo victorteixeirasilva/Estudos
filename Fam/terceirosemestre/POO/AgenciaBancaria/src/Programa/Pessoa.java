@@ -35,7 +35,7 @@ public class Pessoa {
 	}
 	
 	public String toString() {
-		return "\nNome: "+this.getNome()+
+		return 	"\nNome: "+this.getNome()+
 				"\nCPF: "+this.getCPF()+
 				"\nEmail "+this.getEmail();
 	}
