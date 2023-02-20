@@ -10,7 +10,7 @@ public class Conta {
 	private Pessoa pessoa;
 	private Double saldo = 0.0;
 	
-	public Conta(int numeroConta, Pessoa pessoa, Double saldo) {
+	public Conta(Pessoa pessoa) {
 		this.numeroConta = contadorDeContas;
 		this.pessoa = pessoa;
 		contadorDeContas += 1;
