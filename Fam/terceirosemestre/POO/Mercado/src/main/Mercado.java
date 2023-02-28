@@ -18,7 +18,7 @@ public class Mercado {
 	}
 	
 	public static void menu() {
-		JOptionPane.showMessageDialog(null, "Welcome to Zé Market");
+		JOptionPane.showMessageDialog(null, "Bem Vindo ao Carambola!");
 		int option = Integer.parseInt(JOptionPane.showInputDialog(
 					 "*** Selecione uma operação que deseja realizar ***"
 					+"\n| Opção 1 - Cadastrar |"
