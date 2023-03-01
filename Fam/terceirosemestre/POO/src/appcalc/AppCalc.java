@@ -1,3 +1,4 @@
+// Victor teixeira
 //Pacote geralmente é escrito tudo em minusculo
 //Projetos seguindo boas praticas é nomeado com a primeira letra de cada palavra em maiusculo
 package appcalc;
@@ -27,7 +28,7 @@ public class AppCalc {
 		System.exit(0);
 
 		/*
-		 * Anotações:
+		 * Anotações
 		 * 
 		 * Codigo com qualidade: -> O ideal para um código com uma melhor performance, é
 		 * com o menor número de variaveis. Pois cada uma delas representa um espaço em
