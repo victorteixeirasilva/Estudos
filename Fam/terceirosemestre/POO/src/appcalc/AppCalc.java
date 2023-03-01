@@ -79,22 +79,5 @@ public class AppCalc {
 		System.out.println("N1:" + n1 + " / N2:" + n2 + " = " + (n1 / n2));
 	}
 
-	/*
-	 * public static void soma(int n1, int n2) { System.out.println("\nSOMANDO...");
-	 * int res = n1+n2; System.out.println("N1:" + n1 + " + N2:" + n2 + " = " +
-	 * res); }
-	 * 
-	 * public static void subtrair(int n1, int n2) {
-	 * System.out.println("\nSUBTRAINDO..."); int res = n1-n2;
-	 * System.out.println("N1:" + n1 + " - N2:" + n2 + " = " + res); }
-	 * 
-	 * public static void multiplicar(int n1, int n2) {
-	 * System.out.println("\nMULTIPLICANDO..."); int res = n1*n2;
-	 * System.out.println("N1:" + n1 + " x N2:" + n2 + " = " + res); }
-	 * 
-	 * public static void dividir(int n1, int n2) {
-	 * System.out.println("\nDIVIDINDO..."); int res = n1/n2;
-	 * System.out.println("N1:" + n1 + " / N2:" + n2 + " = " + res); }
-	 */
 
 }
