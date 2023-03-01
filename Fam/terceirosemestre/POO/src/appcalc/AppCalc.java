@@ -1,5 +1,8 @@
+//Pacote geralmente é escrito tudo em minusculo
+//Projetos seguindo boas praticas é nomeado com a primeira letra de cada palavra em maiusculo
 package appcalc;
 
+//Classe é nomeado como projeto seguindo as boas praticas de programação
 public class AppCalc {
 
 	public static void main(String[] args) {
@@ -7,6 +10,70 @@ public class AppCalc {
 		System.out.println("*           Opção 1 - SOMAR            *");
 		System.out.println("*           Opção 2 - SUBTRAIR         *");
 		System.out.println("****************************************");
+		
+		// A grande maioria dos comandos segue a grafia de primeira letra maiuscula e o
+				// resto do comando em minusculo.
+				System.out.println("BOA NOITE!");
+				System.out.println("DICIPINA POO!");
+
+				soma(10,2);
+				subtrair(10,2);
+				multiplicar(10,2);
+				dividir(10,2);
+				
+				/*
+				 * Anotações:
+				 * 
+				 * Codigo com qualidade: -> O ideal para um código com uma melhor performance, é
+				 * com o menor número de variaveis. Pois cada uma delas representa um espaço em
+				 * memoria.
+				 */
 	}
+	
+	public static void soma(int n1, int n2) {
+		System.out.println("\nSOMANDO...");
+		System.out.println("N1:" + n1 + " + N2:" + n2 + " = " + (n1+n2));
+	}
+	
+	public static void subtrair(int n1, int n2) {
+		System.out.println("\nSUBTRAINDO...");
+		System.out.println("N1:" + n1 + " - N2:" + n2 + " = " + (n1-n2));
+	}
+	
+	public static void multiplicar(int n1, int n2) {
+		System.out.println("\nMULTIPLICANDO...");
+		System.out.println("N1:" + n1 + " x N2:" + n2 + " = " + (n1*n2));
+	}
+	
+	public static void dividir(int n1, int n2) {
+		System.out.println("\nDIVIDINDO...");
+		System.out.println("N1:" + n1 + " / N2:" + n2 + " = " + (n1/n2));
+	}
+	
+	/*
+	public static void soma(int n1, int n2) {
+		System.out.println("\nSOMANDO...");
+		int res = n1+n2;
+		System.out.println("N1:" + n1 + " + N2:" + n2 + " = " + res);
+	}
+	
+	public static void subtrair(int n1, int n2) {
+		System.out.println("\nSUBTRAINDO...");
+		int res = n1-n2;
+		System.out.println("N1:" + n1 + " - N2:" + n2 + " = " + res);
+	}
+
+	public static void multiplicar(int n1, int n2) {
+		System.out.println("\nMULTIPLICANDO...");
+		int res = n1*n2;
+		System.out.println("N1:" + n1 + " x N2:" + n2 + " = " + res);
+	}
+
+	public static void dividir(int n1, int n2) {
+		System.out.println("\nDIVIDINDO...");
+		int res = n1/n2;
+		System.out.println("N1:" + n1 + " / N2:" + n2 + " = " + res);
+	}
+	*/
 
 }
