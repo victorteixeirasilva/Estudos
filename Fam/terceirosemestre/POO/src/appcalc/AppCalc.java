@@ -14,17 +14,23 @@ public class AppCalc {
 		System.out.println("BOA NOITE!");
 		System.out.println("DICIPINA POO!");
 
+		menu();
 		
+		
+		
+		
+		/*
 		System.out.println("******************MENU******************");
 		System.out.println("*           Opção 1 - SOMAR            *");
 		System.out.println("*           Opção 2 - SUBTRAIR         *");
 		System.out.println("****************************************");
 		
-		
 		soma();
 		subtrair();
 		multiplicar();
 		dividir();
+		*/
+		
 		System.exit(0);
 
 		/*
@@ -35,7 +41,15 @@ public class AppCalc {
 		 * memoria.
 		 */
 	}
+	
+	public static void menu() {
+		System.out.println("******************MENU******************");
+		System.out.println("*           Opção 1 - SOMAR            *");
+		System.out.println("*           Opção 2 - SUBTRAIR         *");
+		System.out.println("****************************************");
+	}
 
+	/*
 	public static void soma() {
 		int n1, n2;
 		Scanner entrada = new Scanner(System.in);
@@ -79,6 +93,6 @@ public class AppCalc {
 		System.out.println("\nDIVIDINDO...");
 		System.out.println("N1:" + n1 + " / N2:" + n2 + " = " + (n1 / n2));
 	}
-
+	*/
 
 }
