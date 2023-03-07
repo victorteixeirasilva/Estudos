@@ -20,6 +20,31 @@ public class AppCalc {
 		System.exit(0);
 
 	}
+	public static void ex5() {
+		//Exercício 5 - receba dois valores e compare se são iguais ou não,
+		//se não exiba qual o maior e qual o menor
+		Scanner entrada = new Scanner(System.in);
+		double numero1, numero2;
+		System.out.println("\n=================================");
+		System.out.print("Digite o primeiro Número: ");
+		numero1 = entrada.nextDouble();
+		System.out.println("\nDigite o segundo Número: ");
+		numero2 = entrada.nextDouble();
+		
+		if(numero1==numero2) {
+			System.out.println("Os Números são iguais. "+numero1+", "+numero2);
+		} else {
+			System.out.println("Os Números são diferentes. "+numero1+", "+numero2);
+			if(numero1>numero2) {
+				System.out.println("O Número "+numero1+" é maior que o Número "+numero2);
+			} else {
+				System.out.println("O Número "+numero2+" é maior que o Número "+numero1);				
+			}
+		}
+		System.out.println("=================================\n");
+		entrada.close();
+	}
+	
 	public static void ex4() {
 		//Exercício 4 - Aprovado e Reprovado.
 		Scanner entrada = new Scanner(System.in);
@@ -109,6 +134,8 @@ public class AppCalc {
 		System.out.println("*           (QUADRADO||RETANGULO)      *");
 		System.out.println("*           Opção 4 - EXERCÍCIO 4      *");
 		System.out.println("*           (APROVADO||REPROVADO)      *");
+		System.out.println("*           Opção 5 - EXERCÍCIO 5      *");
+		System.out.println("*           (==||!)                    *");
 		System.out.println("****************************************");
 		int exerc = entrada.nextInt();
 		switch(exerc) {
@@ -123,6 +150,9 @@ public class AppCalc {
 			break;
 		case 4:
 			ex4();
+			break;
+		case 5:
+			ex5();
 			break;
 		default:
 			System.out.println("Opção Invalida!");
