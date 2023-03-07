@@ -5,6 +5,7 @@ package appcalc;
 
 import java.util.Scanner;
 
+import operacoes.Operacoes;
 //Classe é nomeado como projeto seguindo as boas praticas de programação
 public class AppCalc {
 
@@ -41,12 +42,37 @@ public class AppCalc {
 		 * memoria.
 		 */
 	}
-	
 	public static void menu() {
+		Operacoes operacoes = new Operacoes();
+		Scanner entrada = new Scanner(System.in);
+		
 		System.out.println("******************MENU******************");
 		System.out.println("*           Opção 1 - SOMAR            *");
 		System.out.println("*           Opção 2 - SUBTRAIR         *");
+		System.out.println("*           Opção 3 - MULTIPLICAR      *");
+		System.out.println("*           Opção 4 - DIVIDIR          *");
 		System.out.println("****************************************");
+		System.out.print("Opção: ");
+		int escolha = entrada.nextInt();
+		switch(escolha) {
+		case 1:
+			operacoes.soma();
+			break;
+		case 2:
+			operacoes.subtrair();
+			break;
+		case 3:
+			operacoes.multiplicar();
+			break;
+		case 4:
+			operacoes.dividir();
+			break;
+		default:
+			System.out.println("Opção invalida!");
+			break;
+		}
+		System.out.println("");
+		menu();
 	}
 
 	/*
