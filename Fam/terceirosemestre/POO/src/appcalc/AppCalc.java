@@ -6,6 +6,7 @@ package appcalc;
 import java.util.Scanner;
 
 import operacoes.Operacoes;
+import relatorio.Relatorio;
 //Classe é nomeado como projeto seguindo as boas praticas de programação
 public class AppCalc {
 
@@ -14,8 +15,27 @@ public class AppCalc {
 		// resto do comando em minusculo.
 		System.out.println("BOA NOITE!");
 		System.out.println("DICIPINA POO!");
-
-		menu();
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("******************MENU******************");
+		System.out.println("*           Opção 1 - EXERCÍCIO 1      *");
+		System.out.println("*                  (APPCALC)           *");
+		System.out.println("*           Opção 2 - EXERCÍCIO 2      *");
+		System.out.println("*                  (COMISSÃO)          *");
+		System.out.println("****************************************");
+		int exerc = entrada.nextInt();
+		switch(exerc) {
+		case 1:
+			menu();
+			break;
+		case 2:
+			Relatorio relatorios = new Relatorio();
+			relatorios.relatorio();
+			break;
+		default:
+			System.out.println("Opção Invalida!");
+		}
 		
 		
 		
