@@ -34,13 +34,16 @@ public class AppCalc {
 		System.out.println("=========================================\n");
 		System.out.println("\n=========================================");
 		if ((ladoA == ladoB)&&(ladoB == ladoC)) {
-			System.out.println("O triagulo tem os 3 lados iguais por isso é equilatero");
+			System.out.println("O triâgulo tem os 3 lados iguais por isso é Equilatero.");
 		} else if ((ladoA == ladoB)||(ladoB == ladoC)||(ladoC == ladoA)) {
-			
+			System.out.println("O triângulo tem dois lados iguais por isso é Isósceles.");
+		} else {
+			System.out.println("O triângulo tem todos os lados diferentes por isso é Escaleno.");
 		}
 		System.out.println("=========================================\n");
+		entrada.close();
+		ex6();
 	}
-	
 	public static void ex5() {
 		//Exercício 5 - receba dois valores e compare se são iguais ou não,
 		//se não exiba qual o maior e qual o menor
@@ -64,6 +67,7 @@ public class AppCalc {
 		}
 		System.out.println("=================================\n");
 		entrada.close();
+		ex5();
 	}
 	public static void ex4() {
 		//Exercício 4 - Aprovado e Reprovado.
@@ -79,6 +83,7 @@ public class AppCalc {
 		}
 		System.out.println("=================================\n");
 		entrada.close();
+		ex4();
 	}
 	public static void ex2() {
 		Relatorio relatorios = new Relatorio();
@@ -107,7 +112,9 @@ public class AppCalc {
 			System.out.println("A area do quadrilatero é (base X altura = área) = "+base+" X "+altura+" = "+area);
 			System.out.println("============================================");
 		}
+
 		entrada.close();
+		ex3();
 	}
 	public static void ex1() {
 		Operacoes operacoes = new Operacoes();
