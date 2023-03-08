@@ -85,10 +85,6 @@ public class AppCalc {
 		entrada.close();
 		ex4();
 	}
-	public static void ex2() {
-		Relatorio relatorios = new Relatorio();
-		relatorios.relatorio();
-	}
 	public static void ex3() {
 		//Exercício 3
 		int base, altura, area;
@@ -115,6 +111,10 @@ public class AppCalc {
 
 		entrada.close();
 		ex3();
+	}
+	public static void ex2() {
+		Relatorio relatorios = new Relatorio();
+		relatorios.relatorio();
 	}
 	public static void ex1() {
 		Operacoes operacoes = new Operacoes();
