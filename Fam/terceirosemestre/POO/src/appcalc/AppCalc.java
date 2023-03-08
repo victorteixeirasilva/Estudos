@@ -20,6 +20,27 @@ public class AppCalc {
 		System.exit(0);
 
 	}
+	public static void ex6() {
+		Scanner entrada = new Scanner(System.in);
+		int ladoA, ladoB, ladoC;
+		
+		System.out.println("\n=========================================");
+		System.out.print("Informe o Lado A do Triangulo: ");
+		ladoA = entrada.nextInt();
+		System.out.print("Informe o Lado B do Triangulo: ");
+		ladoB = entrada.nextInt();
+		System.out.print("Informe o Lado C do Triangulo: ");
+		ladoC = entrada.nextInt();
+		System.out.println("=========================================\n");
+		System.out.println("\n=========================================");
+		if ((ladoA == ladoB)&&(ladoB == ladoC)) {
+			System.out.println("O triagulo tem os 3 lados iguais por isso é equilatero");
+		} else if ((ladoA == ladoB)||(ladoB == ladoC)||(ladoC == ladoA)) {
+			
+		}
+		System.out.println("=========================================\n");
+	}
+	
 	public static void ex5() {
 		//Exercício 5 - receba dois valores e compare se são iguais ou não,
 		//se não exiba qual o maior e qual o menor
@@ -44,7 +65,6 @@ public class AppCalc {
 		System.out.println("=================================\n");
 		entrada.close();
 	}
-	
 	public static void ex4() {
 		//Exercício 4 - Aprovado e Reprovado.
 		Scanner entrada = new Scanner(System.in);
@@ -136,6 +156,8 @@ public class AppCalc {
 		System.out.println("*           (APROVADO||REPROVADO)      *");
 		System.out.println("*           Opção 5 - EXERCÍCIO 5      *");
 		System.out.println("*           (==||!)                    *");
+		System.out.println("*           Opção 6 - EXERCÍCIO 6      *");
+		System.out.println("*           (TRIANGULO)                *");
 		System.out.println("****************************************");
 		int exerc = entrada.nextInt();
 		switch(exerc) {
@@ -153,6 +175,9 @@ public class AppCalc {
 			break;
 		case 5:
 			ex5();
+			break;
+		case 6:
+			ex6();
 			break;
 		default:
 			System.out.println("Opção Invalida!");
