@@ -20,6 +20,38 @@ public class AppCalc {
 		System.exit(0);
 
 	}
+	
+	public static void ex8() {
+		Scanner entrada = new Scanner(System.in);
+		int tabuada;
+		
+		System.out.print("Digite o número que deseja a tabuada: ");
+		tabuada = entrada.nextInt();
+		for (int i = 1;i <= 10; i++) {
+			System.out.println(tabuada+" X "+i+" = "+(tabuada*i));
+		}
+		entrada.close();
+		System.out.println("==============================");
+		menu();
+	}
+	public static void ex7() {
+		String msg;
+		int count;
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.print("Digite a Mensagem a ser Exibida: ");
+		msg = entrada.nextLine();
+		System.out.print("Digite a quantidade de vezes que a mensagem será exibida: ");
+		count = entrada.nextInt();
+		
+		for(int i = 1;i <= count; i++) {
+			System.out.println(" | "+msg+" | A mensagem foi exibida pela "+i+" vez");
+		}
+		entrada.close();
+		System.out.println("==============================");
+		menu();
+	}
 	public static void ex6() {
 		Scanner entrada = new Scanner(System.in);
 		int ladoA, ladoB, ladoC;
@@ -154,9 +186,9 @@ public class AppCalc {
 		
 		System.out.println("******************MENU******************");
 		System.out.println("*           Opção 1 - EXERCÍCIO 1      *");
-		System.out.println("*           (APPCALC)           *");
+		System.out.println("*           (APPCALC)                  *");
 		System.out.println("*           Opção 2 - EXERCÍCIO 2      *");
-		System.out.println("*           (COMISSÃO)          *");
+		System.out.println("*           (COMISSÃO)                 *");
 		System.out.println("*           Opção 3 - EXERCÍCIO 3      *");
 		System.out.println("*           (QUADRADO||RETANGULO)      *");
 		System.out.println("*           Opção 4 - EXERCÍCIO 4      *");
@@ -165,6 +197,10 @@ public class AppCalc {
 		System.out.println("*           (==||!)                    *");
 		System.out.println("*           Opção 6 - EXERCÍCIO 6      *");
 		System.out.println("*           (TRIANGULO)                *");
+		System.out.println("*           Opção 7 - EXERCÍCIO 7      *");
+		System.out.println("*           (MENSAGEM)                 *");
+		System.out.println("*           Opção 8 - EXERCÍCIO 8      *");
+		System.out.println("*           (TABUADA)                  *");
 		System.out.println("****************************************");
 		int exerc = entrada.nextInt();
 		switch(exerc) {
@@ -185,6 +221,12 @@ public class AppCalc {
 			break;
 		case 6:
 			ex6();
+			break;
+		case 7:
+			ex7();
+			break;
+		case 8:
+			ex8();
 			break;
 		default:
 			System.out.println("Opção Invalida!");
