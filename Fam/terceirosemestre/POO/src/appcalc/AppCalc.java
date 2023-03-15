@@ -20,7 +20,31 @@ public class AppCalc {
 		System.exit(0);
 
 	}
-	
+	public static void ex9() {
+		Scanner entrada = new Scanner(System.in);
+		
+		int num, count, soma, media;
+		count = 0;
+		soma = 0;
+			
+		do {
+			System.out.print("Digite um Número ou 0 para sair: ");
+			num = entrada.nextInt();
+			if(num != 0) {
+				count = count+1;
+				soma = soma+num;
+				System.out.println(num+" +");
+			}
+		} while (num!=0);
+		media = soma/count;
+		System.out.println("========================================");
+		System.out.println("A soma de todos os números digitados é: "+soma);
+		System.out.println("Foram digitados "+count+" números");
+		System.out.println("A média de todos os números é: "+media);
+		System.out.println("========================================");
+		entrada.close();
+		
+	}
 	public static void ex8() {
 		Scanner entrada = new Scanner(System.in);
 		int tabuada;
@@ -200,6 +224,8 @@ public class AppCalc {
 		System.out.println("*           (MENSAGEM)                 *");
 		System.out.println("*           Opção 8 - EXERCÍCIO 8      *");
 		System.out.println("*           (TABUADA)                  *");
+		System.out.println("*           Opção 9 - EXERCÍCIO 9      *");
+		System.out.println("*           (Número||0)                  *");
 		System.out.println("****************************************");
 		int exerc = entrada.nextInt();
 		switch(exerc) {
@@ -226,6 +252,9 @@ public class AppCalc {
 			break;
 		case 8:
 			ex8();
+			break;
+		case 9:
+			ex9();
 			break;
 		default:
 			System.out.println("Opção Invalida!");
