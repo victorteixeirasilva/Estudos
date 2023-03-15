@@ -27,12 +27,12 @@ public class AppCalc {
 		
 		System.out.print("Digite o número que deseja a tabuada: ");
 		tabuada = entrada.nextInt();
+		System.out.println("***** Tabuada "+tabuada+" *****");
 		for (int i = 1;i <= 10; i++) {
 			System.out.println(tabuada+" X "+i+" = "+(tabuada*i));
 		}
 		entrada.close();
-		System.out.println("==============================");
-		menu();
+		System.out.println("***********************");
 	}
 	public static void ex7() {
 		String msg;
@@ -50,7 +50,6 @@ public class AppCalc {
 		}
 		entrada.close();
 		System.out.println("==============================");
-		menu();
 	}
 	public static void ex6() {
 		Scanner entrada = new Scanner(System.in);
