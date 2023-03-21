@@ -20,6 +20,9 @@ public class AppCalc {
 		System.exit(0);
 
 	}
+	public static void ex10() {
+		
+	}
 	public static void ex9() {
 		Scanner entrada = new Scanner(System.in);
 		
@@ -44,8 +47,7 @@ public class AppCalc {
 		System.out.println("========================================");
 		entrada.close();
 		
-	}
-	public static void ex8() {
+	}	public static void ex8() {
 		Scanner entrada = new Scanner(System.in);
 		int tabuada;
 		
@@ -225,7 +227,9 @@ public class AppCalc {
 		System.out.println("*           Opção 8 - EXERCÍCIO 8      *");
 		System.out.println("*           (TABUADA)                  *");
 		System.out.println("*           Opção 9 - EXERCÍCIO 9      *");
-		System.out.println("*           (Número||0)                  *");
+		System.out.println("*           (Número||0)                *");
+		System.out.println("*           Opção 10 - EXERCÍCIO 10    *");
+		System.out.println("*           (COMEÇO POO)               *");
 		System.out.println("****************************************");
 		int exerc = entrada.nextInt();
 		switch(exerc) {
@@ -255,6 +259,9 @@ public class AppCalc {
 			break;
 		case 9:
 			ex9();
+			break;
+		case 10:
+			ex10();
 			break;
 		default:
 			System.out.println("Opção Invalida!");
