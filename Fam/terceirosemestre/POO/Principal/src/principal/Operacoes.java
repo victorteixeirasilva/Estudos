@@ -46,6 +46,7 @@ public class Operacoes {
 	}
 	
 	public void somar() {
+		System.out.println("Operação escolhida: Somar");
 		entrarNumeros();
 		this.res = n1 + n2;
 		System.out.println(n1+" + "+n2+" = "+res);
@@ -54,6 +55,7 @@ public class Operacoes {
 	}
 	
 	public void subtrair() {
+		System.out.println("Operação escolhida: Subtrair");
 		entrarNumeros();
 		this.res = n1 - n2;
 		System.out.println(n1+" - "+n2+" = "+res);
@@ -62,6 +64,7 @@ public class Operacoes {
 	}
 	
 	public void multiplicar() {
+		System.out.println("Operação escolhida: Multiplicar");
 		entrarNumeros();
 		this.res = n1 * n2;
 		System.out.println(n1+" x "+n2+" = "+res);
@@ -70,6 +73,7 @@ public class Operacoes {
 	}
 
 	public void dividir() {
+		System.out.println("Operação escolhida: Dividir");
 		entrarNumeros();
 		if(this.n2 == 0) {
 			System.out.println("Divisão invalida pois não existe divisão por 0");
