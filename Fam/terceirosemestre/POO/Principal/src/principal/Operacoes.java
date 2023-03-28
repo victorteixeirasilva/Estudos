@@ -3,7 +3,7 @@ package principal;
 import java.util.Scanner;
 
 public class Operacoes {
-	int n1, n2, res;
+	int n1, n2, res, escolha;
 	Scanner entrada = new Scanner(System.in);
 	
 	public void Menu() {		
@@ -13,8 +13,14 @@ public class Operacoes {
 		System.out.println("*           Opção 3 - MULTIPLICAR      *");
 		System.out.println("*           Opção 4 - DIVIDIR          *");
 		System.out.println("****************************************");
+		
+		escolherOpcao();
+	}
+	
+	public void escolherOpcao() {
 		System.out.print("Opção: ");
-		int escolha = entrada.nextInt();
+		escolha = entrada.nextInt();
+		
 		switch(escolha) {
 		case 1:
 			somar();
@@ -38,8 +44,10 @@ public class Operacoes {
 		System.out.println("***************************");
 		System.out.print("Digite o Primeiro Número: ");
 		this.n1 = entrada.nextInt();
+		
 		System.out.print("Digite o Segundo Número: ");
 		this.n2 = entrada.nextInt();
+		
 		System.out.println("Primeiro Número: "+n1);
 		System.out.println("Segundo Número: "+n2);
 		System.out.println("***************************");
@@ -47,8 +55,10 @@ public class Operacoes {
 	
 	public void somar() {
 		System.out.println("Operação escolhida: Somar");
+		
 		entrarNumeros();
 		this.res = n1 + n2;
+		
 		System.out.println(n1+" + "+n2+" = "+res);
 		System.out.println("***************************");
 		Menu();
@@ -56,8 +66,10 @@ public class Operacoes {
 	
 	public void subtrair() {
 		System.out.println("Operação escolhida: Subtrair");
+		
 		entrarNumeros();
 		this.res = n1 - n2;
+		
 		System.out.println(n1+" - "+n2+" = "+res);
 		System.out.println("***************************");
 		Menu();
@@ -65,8 +77,10 @@ public class Operacoes {
 	
 	public void multiplicar() {
 		System.out.println("Operação escolhida: Multiplicar");
+		
 		entrarNumeros();
 		this.res = n1 * n2;
+		
 		System.out.println(n1+" x "+n2+" = "+res);
 		System.out.println("***************************");
 		Menu();
@@ -74,6 +88,7 @@ public class Operacoes {
 
 	public void dividir() {
 		System.out.println("Operação escolhida: Dividir");
+		
 		entrarNumeros();
 		if(this.n2 == 0) {
 			System.out.println("Divisão invalida pois não existe divisão por 0");
