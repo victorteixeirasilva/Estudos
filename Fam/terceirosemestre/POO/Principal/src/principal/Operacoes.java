@@ -6,16 +6,18 @@ public class Operacoes {
 	int n1, n2, res, escolha;
 	Scanner entrada = new Scanner(System.in);
 	
-	public void Menu() {		
-		System.out.println("******************MENU******************");
-		System.out.println("*           Opção 1 - SOMAR            *");
-		System.out.println("*           Opção 2 - SUBTRAIR         *");
-		System.out.println("*           Opção 3 - MULTIPLICAR      *");
-		System.out.println("*           Opção 4 - DIVIDIR          *");
-		System.out.println("*           Opção 5 - SAIR             *");
-		System.out.println("****************************************");
+	public void Menu() {
+		do {
+			System.out.println("******************MENU******************");
+			System.out.println("*           Opção 1 - SOMAR            *");
+			System.out.println("*           Opção 2 - SUBTRAIR         *");
+			System.out.println("*           Opção 3 - MULTIPLICAR      *");
+			System.out.println("*           Opção 4 - DIVIDIR          *");
+			System.out.println("*           Opção 5 - SAIR             *");
+			System.out.println("****************************************");
 		
-		escolherOpcao();
+			escolherOpcao();
+		}while(escolha != 5);
 	}
 	
 	public void escolherOpcao() {
@@ -40,6 +42,7 @@ public class Operacoes {
 			break;
 		default:
 			System.out.println("Opção invalida!");
+			Menu();
 			break;
 		}
 	}
@@ -47,6 +50,8 @@ public class Operacoes {
 	public void sair() {
 		System.out.println("*********************************************");
 		System.out.println("**** OBRIGADO POR USAR NOSSA CALCULADORA ****");
+		System.out.println("*********************************************");
+		System.out.println("************* SISTEMA ENCERRADO *************");
 		System.out.println("*********************************************");
 		System.exit(0);
 	}
@@ -72,7 +77,6 @@ public class Operacoes {
 		
 		System.out.println(n1+" + "+n2+" = "+res);
 		System.out.println("***************************");
-		Menu();
 	}
 	
 	public void subtrair() {
@@ -83,7 +87,6 @@ public class Operacoes {
 		
 		System.out.println(n1+" - "+n2+" = "+res);
 		System.out.println("***************************");
-		Menu();
 	}
 	
 	public void multiplicar() {
@@ -94,7 +97,6 @@ public class Operacoes {
 		
 		System.out.println(n1+" x "+n2+" = "+res);
 		System.out.println("***************************");
-		Menu();
 	}
 
 	public void dividir() {
@@ -108,7 +110,6 @@ public class Operacoes {
 			System.out.println(n1+" / "+n2+" = "+res);
 			System.out.println("***************************");
 		}
-		Menu();
 	}
 
 }
