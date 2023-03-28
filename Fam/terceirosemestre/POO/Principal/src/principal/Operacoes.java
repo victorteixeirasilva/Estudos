@@ -12,6 +12,7 @@ public class Operacoes {
 		System.out.println("*           Opção 2 - SUBTRAIR         *");
 		System.out.println("*           Opção 3 - MULTIPLICAR      *");
 		System.out.println("*           Opção 4 - DIVIDIR          *");
+		System.out.println("*           Opção 5 - SAIR             *");
 		System.out.println("****************************************");
 		
 		escolherOpcao();
@@ -34,10 +35,20 @@ public class Operacoes {
 		case 4:
 			dividir();
 			break;
+		case 5:
+			sair();
+			break;
 		default:
 			System.out.println("Opção invalida!");
 			break;
 		}
+	}
+	
+	public void sair() {
+		System.out.println("*********************************************");
+		System.out.println("**** OBRIGADO POR USAR NOSSA CALCULADORA ****");
+		System.out.println("*********************************************");
+		System.exit(0);
 	}
 	
 	public void entrarNumeros() {
