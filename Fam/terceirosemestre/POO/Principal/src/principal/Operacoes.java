@@ -3,8 +3,8 @@ package principal;
 import java.util.Scanner;
 
 public class Operacoes {
-	int n1, n2, res, escolha;
-	Scanner entrada = new Scanner(System.in);
+	private int n1, n2, res, escolha;
+	private Scanner entrada = new Scanner(System.in);
 	
 	public void Menu() {
 		do {
