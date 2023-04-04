@@ -9,5 +9,6 @@ public class Main {
 		boletim.EntrarDisciplina();
 		boletim.EntrarNotas();
 		boletim.EntrarNotaA3();
+		boletim.ValidarNota(boletim.a1, boletim, boletim.a3);
 	}
 }

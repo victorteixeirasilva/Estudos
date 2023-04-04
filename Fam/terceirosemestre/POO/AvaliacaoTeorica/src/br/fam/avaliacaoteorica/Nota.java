@@ -11,9 +11,11 @@ public class Nota {
 	public void EntrarNotas() {
 		System.out.print("Digite a nota A1: ");
 		this.a1 = entrada.nextDouble();
+		ValidarNota(this.a1);
 		
 		System.out.print("Digite a nota A2: ");
 		this.a2 = entrada.nextDouble();
+		ValidarNota(this.a2);
 		
 	}
 	
@@ -22,11 +24,16 @@ public class Nota {
 			System.out.println("Aluno não alcançou a média, precisa fazer A3");
 			System.out.print("Digite a nota A3: ");
 			this.a3 = entrada.nextDouble();
+			ValidarNota(this.a3);
 		} 
 	}
 	
-	public int ValidarNota(double a1, double a2, double a3) {
-		
+	public int ValidarNota(double nota) {
+		if((nota<=5.0)&&(nota>=0.0)) {
+			return 1;
+		}
+		System.out.println("Nota Inválida!");
+		Sair();
 		return 0;
 	}
 	
@@ -35,7 +42,8 @@ public class Nota {
 	}
 	
 	public void Sair() {
-		
+		System.out.println("***SISTEMA ENCERRADO****");
+		System.exit(0);
 	}
 	
 	public String CalcStatus1(double media) {
