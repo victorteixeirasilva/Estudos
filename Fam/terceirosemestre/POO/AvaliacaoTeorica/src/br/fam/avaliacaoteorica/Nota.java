@@ -25,6 +25,7 @@ public class Nota {
 			System.out.print("Digite a nota A3: ");
 			this.a3 = entrada.nextDouble();
 			ValidarNota(this.a3);
+			SubstituirNota(this.a1, this.a2, this.a3);
 		} 
 	}
 	
@@ -60,7 +61,12 @@ public class Nota {
 		return this.nome;
 	}
 	
-	public void ExibeBoletim(double a1, double a2, double a3, double media, String nome, String status, String disciplina) {
+	public void ExibeBoletim() {
+		System.out.println("*****BOLETIM DO ALUNO*****");
+		System.out.println("Aluno: "+this.nome);
+		System.out.println("Disciplina: "+this.disciplina);
+		System.out.println("Nota A1: "+this.a1);
+		System.out.println("Nota A2: "+this.a2);
 		
 	}
 	
@@ -71,6 +77,11 @@ public class Nota {
 	}
 	
 	public double SubstituirNota(double a1, double a2, double a3) {
+		if((this.a1>this.a2)&&(this.a3>this.a2)) {
+			this.a2 = this.a3;
+		} else if ((this.a2>this.a1)&&(this.a3>this.a1)) {
+			this.a1 = this.a3;
+		}
 		return 0;
 	}
 	
