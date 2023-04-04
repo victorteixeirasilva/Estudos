@@ -32,11 +32,13 @@ public class Nota {
 	
 	public int ValidarNota(double nota) {
 		if((nota<=5.0)&&(nota>=0.0)) {
-			return 1;
+			this.resp = 1;
+			return resp;
 		}
 		System.out.println("Nota Inválida!");
+		this.resp = 0;
 		Sair();
-		return 0;
+		return resp;
 	}
 	
 	public double CalcMedia(double a1, double a2) {
@@ -52,6 +54,7 @@ public class Nota {
 	}
 	
 	public String CalcStatus1(double media) {
+		
 		return "aprovado";
 	}
 	
