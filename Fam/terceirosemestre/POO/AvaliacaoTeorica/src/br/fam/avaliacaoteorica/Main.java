@@ -8,5 +8,6 @@ public class Main {
 		boletim.EntrarNomeAluno();
 		boletim.EntrarDisciplina();
 		boletim.EntrarNotas();
+		boletim.EntrarNotaA3();
 	}
 }

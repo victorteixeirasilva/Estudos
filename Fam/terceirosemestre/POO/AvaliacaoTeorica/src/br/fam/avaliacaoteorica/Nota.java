@@ -19,9 +19,10 @@ public class Nota {
 	
 	public void EntrarNotaA3() {
 		if((this.a1+this.a2)<6) {
+			System.out.println("Aluno não alcançou a média, precisa fazer A3");
 			System.out.print("Digite a nota A3: ");
 			this.a3 = entrada.nextDouble();
-		}
+		} 
 	}
 	
 	public int ValidarNota(double a1, double a2, double a3) {
