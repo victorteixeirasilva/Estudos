@@ -7,6 +7,7 @@ public class Nota {
 	private double a2, a1, a3, media;
 	private String status, nome, disciplina;
 	private int resp;
+	private double notaAux;
 	
 	public void EntrarNotas() {
 		System.out.print("Digite a nota A1: ");
@@ -39,7 +40,10 @@ public class Nota {
 	}
 	
 	public double CalcMedia(double a1, double a2) {
-		return 0;
+		SubstituirNota(this.a1, this.a2, this.a3);
+		this.media = this.a1 + this.a2;
+		this.a2 = this.notaAux;
+		return media;
 	}
 	
 	public void Sair() {
@@ -62,12 +66,16 @@ public class Nota {
 	}
 	
 	public void ExibeBoletim() {
+		CalcMedia(a1, a2);
 		System.out.println("*****BOLETIM DO ALUNO*****");
 		System.out.println("Aluno: "+this.nome);
 		System.out.println("Disciplina: "+this.disciplina);
 		System.out.println("Nota A1: "+this.a1);
 		System.out.println("Nota A2: "+this.a2);
-		
+		System.out.println("Nota A3: "+this.a3);
+		System.out.println("Nota Final: "+this.media);
+		System.out.println("Situação: "+this.status);
+		System.out.println("**************************");
 	}
 	
 	public String EntrarDisciplina() {
@@ -78,11 +86,13 @@ public class Nota {
 	
 	public double SubstituirNota(double a1, double a2, double a3) {
 		if((this.a1>this.a2)&&(this.a3>this.a2)) {
+			this.notaAux = this.a2;
 			this.a2 = this.a3;
 		} else if ((this.a2>this.a1)&&(this.a3>this.a1)) {
+			this.notaAux = this.a1;
 			this.a1 = this.a3;
 		}
-		return 0;
+		return notaAux;
 	}
 	
 	
