@@ -7,7 +7,6 @@ public class Nota {
 	private double a2, a1, a3, media;
 	private String status, nome, disciplina;
 	private int resp;
-	private double notaAux;
 	
 	public void EntrarNotas() {
 		System.out.print("Digite a nota A1: ");
@@ -17,6 +16,8 @@ public class Nota {
 		System.out.print("Digite a nota A2: ");
 		this.a2 = entrada.nextDouble();
 		ValidarNota(this.a2);
+		CalcMedia(a1, a2);
+		CalcStatus1(media);
 		
 	}
 	
@@ -26,7 +27,6 @@ public class Nota {
 			System.out.print("Digite a nota A3: ");
 			this.a3 = entrada.nextDouble();
 			ValidarNota(this.a3);
-			SubstituirNota(this.a1, this.a2, this.a3);
 		} 
 	}
 	
@@ -42,9 +42,9 @@ public class Nota {
 	}
 	
 	public double CalcMedia(double a1, double a2) {
-		SubstituirNota(this.a1, this.a2, this.a3);
-		this.media = this.a1 + this.a2;
-		this.a2 = this.notaAux;
+		//SubstituirNota(this.a1, this.a2, this.a3);
+		this.media = a1 + a2;
+		//this.a2 = this.notaAux;
 		return media;
 	}
 	
@@ -54,12 +54,21 @@ public class Nota {
 	}
 	
 	public String CalcStatus1(double media) {
+		if(media<6) {
+			EntrarNotaA3();
+			SubstituirNota(this.a1, this.a2, this.a3);
+		}
 		
-		return "aprovado";
+		return "Não precisa de A3";
 	}
 	
 	public String CalcStatu2(double media) {
-		return "aprovado2";
+		if(media>=6) {
+			this.status = "Aluno aprovado";
+		} else {
+			this.status = "Aluno reprovado";
+		}
+		return status;
 	}
 	
 	public String EntrarNomeAluno() {
@@ -69,7 +78,7 @@ public class Nota {
 	}
 	
 	public void ExibeBoletim() {
-		CalcMedia(a1, a2);
+		CalcStatu2(media);
 		System.out.println("*****BOLETIM DO ALUNO*****");
 		System.out.println("Aluno: "+this.nome);
 		System.out.println("Disciplina: "+this.disciplina);
@@ -88,14 +97,16 @@ public class Nota {
 	}
 	
 	public double SubstituirNota(double a1, double a2, double a3) {
-		if((this.a1>this.a2)&&(this.a3>this.a2)) {
-			this.notaAux = this.a2;
-			this.a2 = this.a3;
-		} else if ((this.a2>this.a1)&&(this.a3>this.a1)) {
-			this.notaAux = this.a1;
-			this.a1 = this.a3;
+		if((a1>a2)&&(a3>a2)) {
+			//this.notaAux = this.a2;
+			//this.a2 = this.a3;
+			CalcMedia(this.a1, this.a3);
+		} else if ((a2>a1)&&(a3>a1)) {
+			//this.notaAux = this.a1;
+			//this.a1 = this.a3;
+			CalcMedia(this.a3, this.a2);
 		}
-		return notaAux;
+		return media;
 	}
 	
 	
