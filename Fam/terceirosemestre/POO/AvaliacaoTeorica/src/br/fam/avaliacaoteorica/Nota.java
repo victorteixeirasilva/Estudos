@@ -22,12 +22,12 @@ public class Nota {
 	}
 	
 	public void EntrarNotaA3() {
-		if((this.a1+this.a2)<6) {
+	//	if((this.a1+this.a2)<6) {
 			System.out.println("Aluno não alcançou a média, precisa fazer A3");
 			System.out.print("Digite a nota A3: ");
 			this.a3 = entrada.nextDouble();
 			ValidarNota(this.a3);
-		} 
+	//	} 
 	}
 	
 	public int ValidarNota(double nota) {
@@ -42,9 +42,7 @@ public class Nota {
 	}
 	
 	public double CalcMedia(double a1, double a2) {
-		//SubstituirNota(this.a1, this.a2, this.a3);
 		this.media = a1 + a2;
-		//this.a2 = this.notaAux;
 		return media;
 	}
 	
