@@ -22,12 +22,10 @@ public class Nota {
 	}
 	
 	public void EntrarNotaA3() {
-	//	if((this.a1+this.a2)<6) {
 			System.out.println("Aluno não alcançou a média, precisa fazer A3");
 			System.out.print("Digite a nota A3: ");
 			this.a3 = entrada.nextDouble();
 			ValidarNota(this.a3);
-	//	} 
 	}
 	
 	public int ValidarNota(double nota) {
@@ -96,15 +94,83 @@ public class Nota {
 	
 	public double SubstituirNota(double a1, double a2, double a3) {
 		if((a1>a2)&&(a3>a2)) {
-			//this.notaAux = this.a2;
-			//this.a2 = this.a3;
 			CalcMedia(this.a1, this.a3);
 		} else if ((a2>a1)&&(a3>a1)) {
-			//this.notaAux = this.a1;
-			//this.a1 = this.a3;
 			CalcMedia(this.a3, this.a2);
 		}
 		return media;
+	}
+
+	public Scanner getEntrada() {
+		return entrada;
+	}
+
+	public void setEntrada(Scanner entrada) {
+		this.entrada = entrada;
+	}
+
+	public double getA2() {
+		return a2;
+	}
+
+	public void setA2(double a2) {
+		this.a2 = a2;
+	}
+
+	public double getA1() {
+		return a1;
+	}
+
+	public void setA1(double a1) {
+		this.a1 = a1;
+	}
+
+	public double getA3() {
+		return a3;
+	}
+
+	public void setA3(double a3) {
+		this.a3 = a3;
+	}
+
+	public double getMedia() {
+		return media;
+	}
+
+	public void setMedia(double media) {
+		this.media = media;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDisciplina() {
+		return disciplina;
+	}
+
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
+	}
+
+	public int getResp() {
+		return resp;
+	}
+
+	public void setResp(int resp) {
+		this.resp = resp;
 	}
 	
 	
