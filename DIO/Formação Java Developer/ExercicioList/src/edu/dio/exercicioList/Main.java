@@ -8,6 +8,8 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {	
 		
+		/*EXERCICIO PROPOSTO 2*/
+		
 		
 		/*EXERCICIO PROPOSTO 1
 		//Recebe a média dos 6 primeiros meses do ano e armazene-os em uma lista.
