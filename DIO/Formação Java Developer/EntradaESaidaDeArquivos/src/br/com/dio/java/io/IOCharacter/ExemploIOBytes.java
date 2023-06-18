@@ -18,7 +18,7 @@ public class ExemploIOBytes {
 		String nomeArquivoCopy = nomeArquivo.substring(0, nomeArquivo.indexOf("-")).concat("-copy2.txt");
 		File fcopy = new File(nomeArquivoCopy);
 		
-		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(nomeArquivoCopy));
+		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(fcopy.getName()));
 		
 		int line = 0;
 		while((line = bis.read()) != -1) {
