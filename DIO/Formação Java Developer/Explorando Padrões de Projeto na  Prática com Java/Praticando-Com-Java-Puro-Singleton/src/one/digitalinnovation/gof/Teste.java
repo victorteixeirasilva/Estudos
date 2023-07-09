@@ -3,10 +3,7 @@ package one.digitalinnovation.gof;
 import one.digitalinnovation.gof.Singleton.SingletonEager;
 import one.digitalinnovation.gof.Singleton.SingletonLazy;
 import one.digitalinnovation.gof.Singleton.SingletonLazyHolder;
-import one.digitalinnovation.gof.Strategy.ComportamentoAgressivo;
-import one.digitalinnovation.gof.Strategy.ComportamentoDefensivo;
-import one.digitalinnovation.gof.Strategy.ComportamentoNormal;
-import one.digitalinnovation.gof.Strategy.Comprotamento;
+import one.digitalinnovation.gof.Strategy.*;
 
 public class Teste {
 
@@ -34,7 +31,46 @@ public class Teste {
         Comprotamento defensivo = new ComportamentoDefensivo();
         Comprotamento normal = new ComportamentoNormal();
         Comprotamento agressivo = new ComportamentoAgressivo();
-        
+
+        Robo robo = new Robo();
+        robo.setComprotamento(normal);
+        robo.mover();
+        robo.mover();
+        robo.setComprotamento(defensivo);
+        robo.mover();
+        robo.setComprotamento(agressivo);
+        robo.mover();
+        robo.mover();
+        robo.mover();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
