@@ -6,6 +6,9 @@ import one.digitalinnovation.gof.Singleton.SingletonLazy;
 import one.digitalinnovation.gof.Singleton.SingletonLazyHolder;
 import one.digitalinnovation.gof.Strategy.*;
 
+/**
+ * @author victorteixeirasilva
+ * */
 public class Teste {
 
     public static void main(String[] args) {
