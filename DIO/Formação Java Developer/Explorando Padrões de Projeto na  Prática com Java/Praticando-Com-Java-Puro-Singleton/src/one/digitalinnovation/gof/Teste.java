@@ -1,5 +1,13 @@
 package one.digitalinnovation.gof;
 
+import one.digitalinnovation.gof.Singleton.SingletonEager;
+import one.digitalinnovation.gof.Singleton.SingletonLazy;
+import one.digitalinnovation.gof.Singleton.SingletonLazyHolder;
+import one.digitalinnovation.gof.Strategy.ComportamentoAgressivo;
+import one.digitalinnovation.gof.Strategy.ComportamentoDefensivo;
+import one.digitalinnovation.gof.Strategy.ComportamentoNormal;
+import one.digitalinnovation.gof.Strategy.Comprotamento;
+
 public class Teste {
 
     public static void main(String[] args) {
@@ -20,6 +28,15 @@ public class Teste {
         System.out.println(singletonLazyHolder);
         singletonLazyHolder = SingletonLazyHolder.getInstance();
         System.out.println(singletonLazyHolder);
+
+//        Testes relacionados Strategy:
+
+        Comprotamento defensivo = new ComportamentoDefensivo();
+        Comprotamento normal = new ComportamentoNormal();
+        Comprotamento agressivo = new ComportamentoAgressivo();
+        
+
+
 
     }
 }

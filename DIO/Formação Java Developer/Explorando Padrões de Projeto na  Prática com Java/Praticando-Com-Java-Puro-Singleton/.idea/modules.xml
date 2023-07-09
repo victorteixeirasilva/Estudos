@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Praticando-Com-Java-Puro-Singleton.iml" filepath="$PROJECT_DIR$/Praticando-Com-Java-Puro-Singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Praticando-Com-Java-Puro.iml" filepath="$PROJECT_DIR$/Praticando-Com-Java-Puro.iml" />
     </modules>
   </component>
 </project>
