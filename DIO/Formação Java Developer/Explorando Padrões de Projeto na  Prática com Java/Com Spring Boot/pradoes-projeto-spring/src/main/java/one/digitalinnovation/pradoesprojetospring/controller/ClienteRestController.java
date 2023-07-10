@@ -2,6 +2,7 @@ package one.digitalinnovation.pradoesprojetospring.controller;
 
 import one.digitalinnovation.pradoesprojetospring.model.Cliente;
 import one.digitalinnovation.pradoesprojetospring.service.ClienteService;
+import one.digitalinnovation.pradoesprojetospring.service.imp.ClienteServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,32 +19,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("clientes")
 public class ClienteRestController {
 
-    private ClienteService clienteService = new ClienteService() {
-        @Override
-        public Iterable<Cliente> buscarTodos() {
-            return null;
-        }
-
-        @Override
-        public Cliente buscarPorId(Long id) {
-            return null;
-        }
-
-        @Override
-        public void inserir(Cliente cliente) {
-
-        }
-
-        @Override
-        public void atualizar(Long id, Cliente cliente) {
-
-        }
-
-        @Override
-        public void deletar(Long id) {
-
-        }
-    };
+    @Autowired
+    private ClienteService clienteService;
 
     @GetMapping
     public ResponseEntity<Iterable<Cliente>> buscarTodos(){
@@ -72,25 +49,5 @@ public class ClienteRestController {
         clienteService.deletar(id);
         return ResponseEntity.ok().build();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

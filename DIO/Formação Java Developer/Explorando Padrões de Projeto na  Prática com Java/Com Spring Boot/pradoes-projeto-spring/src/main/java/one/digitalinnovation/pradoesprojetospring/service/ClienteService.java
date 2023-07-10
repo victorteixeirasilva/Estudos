@@ -1,7 +1,7 @@
 package one.digitalinnovation.pradoesprojetospring.service;
-
 import one.digitalinnovation.pradoesprojetospring.model.Cliente;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 /**
  * Interface que define o padrão <b>Strategy</b> no domínio do cliente. Com
@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
  * @author victorteixeirasilva
  * */
 
+@Component
 public interface ClienteService {
 
     public Iterable<Cliente> buscarTodos();

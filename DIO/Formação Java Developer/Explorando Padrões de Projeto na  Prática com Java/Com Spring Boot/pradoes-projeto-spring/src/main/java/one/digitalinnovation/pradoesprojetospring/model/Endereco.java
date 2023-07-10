@@ -1,5 +1,4 @@
 package one.digitalinnovation.pradoesprojetospring.model;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
