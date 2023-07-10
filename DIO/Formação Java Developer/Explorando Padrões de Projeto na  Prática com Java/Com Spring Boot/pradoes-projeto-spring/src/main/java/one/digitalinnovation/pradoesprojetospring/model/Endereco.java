@@ -1,4 +1,6 @@
 package one.digitalinnovation.pradoesprojetospring.model;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,6 +13,7 @@ import javax.persistence.Id;
  *
  * @author victorteixeirasilva
  * */
+@Component
 @Entity
 public class Endereco {
 
