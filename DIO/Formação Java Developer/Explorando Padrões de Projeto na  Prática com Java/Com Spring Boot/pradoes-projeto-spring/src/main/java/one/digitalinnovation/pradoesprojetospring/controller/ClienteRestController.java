@@ -39,7 +39,7 @@ public class ClienteRestController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Cliente> atualizar(@PathVariable long id, @RequestBody Cliente cliente){
+    public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody Cliente cliente){
         clienteService.atualizar(id, cliente);
         return ResponseEntity.ok(cliente);
     }
