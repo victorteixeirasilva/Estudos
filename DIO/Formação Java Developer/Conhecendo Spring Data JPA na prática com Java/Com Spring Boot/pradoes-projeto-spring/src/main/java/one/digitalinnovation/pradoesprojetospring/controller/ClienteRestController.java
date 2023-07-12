@@ -49,7 +49,14 @@ public class ClienteRestController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody Cliente cliente){
+    public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody ClienteForm clienteForm){
+        Cliente cliente = new Cliente();
+        cliente.setNome(clienteForm.getNome());
+        cliente.setCpf(clienteForm.getCpf());
+        Endereco endereco = new Endereco();
+        endereco.setCep(clienteForm.getEnderecoForm().getCep());
+        cliente.setEndereco(endereco);
+
         clienteService.atualizar(id, cliente);
         return ResponseEntity.ok(cliente);
     }
