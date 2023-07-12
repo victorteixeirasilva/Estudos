@@ -3,12 +3,10 @@ package one.digitalinnovation.pradoesprojetospring.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -17,6 +15,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Cliente {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
     @Column(unique = true)

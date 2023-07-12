@@ -1,6 +1,8 @@
 package one.digitalinnovation.pradoesprojetospring.controller;
 
 import one.digitalinnovation.pradoesprojetospring.model.Cliente;
+import one.digitalinnovation.pradoesprojetospring.model.Endereco;
+import one.digitalinnovation.pradoesprojetospring.model.form.ClienteForm;
 import one.digitalinnovation.pradoesprojetospring.service.ClienteService;
 import one.digitalinnovation.pradoesprojetospring.service.imp.ClienteServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +35,15 @@ public class ClienteRestController {
     }
 
     @PostMapping
-    public ResponseEntity<Cliente> inserir(@RequestBody Cliente cliente){
+    public ResponseEntity<Cliente> inserir(@RequestBody ClienteForm clienteForm){
+        Cliente cliente = new Cliente();
+
+        cliente.setNome(clienteForm.getNome());
+        cliente.setCpf(clienteForm.getCpf());
+        Endereco endereco = new Endereco();
+        endereco.setCep(clienteForm.getEnderecoForm().getCep());
+        cliente.setEndereco(endereco);
+
         clienteService.inserir(cliente);
         return ResponseEntity.ok(cliente);
     }
