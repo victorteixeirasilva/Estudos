@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clienteviacep
+    username: vitin
+    password: 2327
+  Jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
