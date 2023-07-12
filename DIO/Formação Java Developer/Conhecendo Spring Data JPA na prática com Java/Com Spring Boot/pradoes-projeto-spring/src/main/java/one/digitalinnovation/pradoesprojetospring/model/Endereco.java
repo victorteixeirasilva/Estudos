@@ -1,5 +1,7 @@
 package one.digitalinnovation.pradoesprojetospring.model;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.Entity;
@@ -15,6 +17,8 @@ import javax.persistence.Id;
  * @author victorteixeirasilva
  * */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Component
 @Entity
 public class Endereco {
