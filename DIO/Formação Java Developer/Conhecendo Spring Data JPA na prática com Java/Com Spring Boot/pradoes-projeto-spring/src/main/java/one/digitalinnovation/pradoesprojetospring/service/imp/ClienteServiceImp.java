@@ -54,8 +54,12 @@ public class ClienteServiceImp implements ClienteService {
     public void atualizar(Long id, Cliente cliente) {
         Optional<Cliente> clienteBd = clienteRepository.findById(id);
         if(clienteBd.isPresent()){
+            cliente.setId(clienteBd.get().getId());
             if((cliente.getEndereco().getCep().equals("string"))||(cliente.getEndereco().getCep().equals(""))){
                 cliente.setEndereco(clienteBd.get().getEndereco());
+            }
+            if(cliente.getCpf() == null){
+                cliente.setCpf(clienteBd.get().getCpf());
             }
             salvarClienteComCep(cliente);
         }

@@ -3,11 +3,14 @@ package one.digitalinnovation.pradoesprojetospring.controller;
 import one.digitalinnovation.pradoesprojetospring.model.Cliente;
 import one.digitalinnovation.pradoesprojetospring.model.Endereco;
 import one.digitalinnovation.pradoesprojetospring.model.form.ClienteForm;
+import one.digitalinnovation.pradoesprojetospring.model.form.ClienteUpdateForm;
 import one.digitalinnovation.pradoesprojetospring.service.ClienteService;
 import one.digitalinnovation.pradoesprojetospring.service.imp.ClienteServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * Esse {@link org.springframework.web.bind.annotation.RestController} representa  nossa <b>Facate</b>, pois  abstrai toda
@@ -35,7 +38,7 @@ public class ClienteRestController {
     }
 
     @PostMapping
-    public ResponseEntity<Cliente> inserir(@RequestBody ClienteForm clienteForm){
+    public ResponseEntity<Cliente> inserir(@Valid @RequestBody ClienteForm clienteForm){
         Cliente cliente = new Cliente();
 
         cliente.setNome(clienteForm.getNome());
@@ -49,12 +52,11 @@ public class ClienteRestController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody ClienteForm clienteForm){
+    public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody ClienteUpdateForm clienteUpdateForm){
         Cliente cliente = new Cliente();
-        cliente.setNome(clienteForm.getNome());
-        cliente.setCpf(clienteForm.getCpf());
+        cliente.setNome(clienteUpdateForm.getNome());
         Endereco endereco = new Endereco();
-        endereco.setCep(clienteForm.getEnderecoForm().getCep());
+        endereco.setCep(clienteUpdateForm.getEnderecoForm().getCep());
         cliente.setEndereco(endereco);
 
         clienteService.atualizar(id, cliente);

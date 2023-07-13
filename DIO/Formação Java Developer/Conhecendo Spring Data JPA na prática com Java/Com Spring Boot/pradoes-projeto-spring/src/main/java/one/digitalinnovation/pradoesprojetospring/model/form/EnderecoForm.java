@@ -10,6 +10,5 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @Component
 public class EnderecoForm {
-
     private String cep;
 }
