@@ -24,7 +24,7 @@ public class LineItem {
     private String total;
     private String totalTax;
     private List<Object> taxes;
-    private List<MetaDatum__1> metaData;
+    private List<MetaDatum__1> meta_data;
     private String sku;
     private Integer price;
     private Image image;

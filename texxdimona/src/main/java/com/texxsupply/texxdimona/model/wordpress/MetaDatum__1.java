@@ -14,7 +14,7 @@ public class MetaDatum__1 {
     private Integer id;
     private String key;
     private String value;
-    private String displayKey;
-    private String displayValue;
+    private String display_key;
+    private String display_value;
 
 }

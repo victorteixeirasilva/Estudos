@@ -1,6 +1,7 @@
 package com.texxsupply.texxdimona.service;
 
 import com.texxsupply.texxdimona.model.dimona.OrderDimona;
+import com.texxsupply.texxdimona.model.wordpress.LineItem;
 import com.texxsupply.texxdimona.model.wordpress.OrderWorpress;
 import feign.Headers;
 import feign.RequestLine;
@@ -28,20 +29,36 @@ public class TexxDimonaService {
 
     public ResponseEntity insertOrder(){
         List<OrderWorpress> orders = wordpressService.getOrders();
-        if (!orders.isEmpty()){
-            List<OrderDimona> ordersDimona = new ArrayList<>();
-            for (int i = 0; i < orders.size(); i++) {
-                OrderWorpress orderWorpressAux = orders.get(i);
+
+        List<OrderWorpress> ordersToDimona = new ArrayList<>();
+
+        for (OrderWorpress order: orders) {
+            List<LineItem> lineItems = order.getLine_items();
+
+            if (!lineItems.isEmpty()&&order.getStatus().equals("processing")){
+                for (LineItem lineItem: lineItems) {
+                    if (lineItem.getSku()==""||lineItem.getSku()==null){
+                        lineItems.remove(lineItem);
+                    }  else if (!lineItems.isEmpty()){
+                        ordersToDimona.add(order);
+                    }
+                }
+            }
+        }
+
+
+        if (!ordersToDimona.isEmpty()){
+            for (int i = 0; i < ordersToDimona.size(); i++) {
+                OrderWorpress orderWorpressAux = ordersToDimona.get(i);
                 if (orderWorpressAux.getStatus().equals("processing")){
-                   OrderDimona orderDimona1 = new OrderDimona(orderWorpressAux);
-                   if(!orderDimona1.getItems().isEmpty()){
-                       ordersDimona.add(orderDimona1);
-                       dimonaService.insertOrder(orderDimona1);
+                   OrderDimona orderDimona = new OrderDimona(orderWorpressAux);
+                   if(!orderDimona.getItems().isEmpty()){
+                       dimonaService.insertOrder(orderDimona);
                    }
                }
             }
                 try {
-                    return ResponseEntity.ok(ordersDimona);
+                    return ResponseEntity.ok(ordersToDimona);
                 } catch (Exception e) {
                     return new ResponseEntity(HttpStatus.CONFLICT);
                 }

@@ -13,7 +13,7 @@ import java.util.List;
 @Component
 public class OrderWorpress {
 
-    private String id;
+    private Integer id;
     private Integer parent_id;
     private String status;
     private String currency;

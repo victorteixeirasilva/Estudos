@@ -26,8 +26,8 @@ public class OrderDimona {
     private Address address;
 
     public OrderDimona(OrderWorpress orderWorpress){
-        this.order_id = orderWorpress.getId();
         this.shipping_speed = "pac";
+        this.order_id = "#"+orderWorpress.getId();
         this.customer_name = orderWorpress.getShipping().getFirst_name()
                 .concat(" ")
                 .concat(orderWorpress.getShipping().getLast_name());
@@ -51,17 +51,20 @@ public class OrderDimona {
             LineItem lineItem = lineItems.get(count);
             Item item = new Item(lineItem);
 
-            if(item.getName() == null || item.getSku() == null || item.getQty().equals(0)){
-                return;
+            if(item.getName()=="Produto Não Dimona"){
+                List<Item> productNotDimona = new ArrayList<>();
+                this.items = productNotDimona;
+                count++;
+                lineItems.iterator().next();
+            } else {
+                List<Item> listItem = new ArrayList<>();
+                listItem.add(item);
+
+                this.items = listItem;
+
+                count++;
+                lineItems.iterator().next();
             }
-
-            List<Item> listItem = new ArrayList<>();
-            listItem.add(item);
-
-            this.items = listItem;
-
-            count++;
-            lineItems.iterator().next();
         }
 
     }
