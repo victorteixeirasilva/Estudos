@@ -6,8 +6,7 @@ import org.springframework.data.annotation.Id;
 import java.util.Set;
 
 public record StudyDeck(
-        String name,
-        String description,
+        String deckId,
         Set<StudyCard> cards
 ) {
     @Builder(toBuilder = true)
