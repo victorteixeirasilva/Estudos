@@ -3,6 +3,7 @@ package br.com.dio.reactiveflashcards.domain.repository;
 import br.com.dio.reactiveflashcards.domain.document.DeckDocument;
 import br.com.dio.reactiveflashcards.domain.document.UserDocument;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 import org.springframework.stereotype.Repository;
 
 @Repository
