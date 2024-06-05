@@ -27,6 +27,7 @@ public class CustomerResource {
     }
 
     @Path("/{id}")
+    @GET
     public Customer getCustomer(@PathParam("id") String id){
         try {
             return  service.getCustomer(id);
