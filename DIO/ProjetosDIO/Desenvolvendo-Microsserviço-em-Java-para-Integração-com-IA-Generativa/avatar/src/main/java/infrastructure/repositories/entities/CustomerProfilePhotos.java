@@ -20,12 +20,20 @@ public class CustomerProfilePhotos {
     @Column(name = "generated_photo")
     String generatedPhoto;
 
+    @Embeddable
     static class CompositeKey {
 
         @Column(name = "customer_id")
         String customerId;
         @Column(name = "id")
         String id;
+
+        public CompositeKey() {}
+
+        public CompositeKey(String customerId, String id) {
+            this.customerId = customerId;
+            this.id = id;
+        }
 
     }
     public Customer toDomain() {
