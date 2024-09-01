@@ -1,0 +1,5 @@
+1. Identificar as Entidades
+2. Identificar as Classes que manipulam as entidades
+3. Identificar classes utilitárias
+
+1 - R: Livro, Caderno, Produto, Cupom, Pedido, Cliente, Gênero,  Matérias.

@@ -8,6 +8,7 @@ import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 
 import java.util.List;
+import java.util.Objects;
 
 @Entity(name = "profile_photos")
 public class CustomerProfilePhotos {
@@ -35,6 +36,18 @@ public class CustomerProfilePhotos {
             this.id = id;
         }
 
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            CompositeKey that = (CompositeKey) o;
+            return Objects.equals(customerId, that.customerId) && Objects.equals(id, that.id);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(customerId, id);
+        }
     }
     public Customer toDomain() {
         return new Customer(compositeKey.customerId,
