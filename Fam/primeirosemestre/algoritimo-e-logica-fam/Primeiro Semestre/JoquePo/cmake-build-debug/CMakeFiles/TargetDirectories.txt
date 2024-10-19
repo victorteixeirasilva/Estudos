@@ -1,3 +1,0 @@
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/JoquePo/cmake-build-debug/CMakeFiles/JoquePo.dir
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/JoquePo/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/JoquePo/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/BissexMet/cmake-build-debug/CMakeFiles/BissexMet.dir
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/BissexMet/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/BissexMet/cmake-build-debug/CMakeFiles/rebuild_cache.dir

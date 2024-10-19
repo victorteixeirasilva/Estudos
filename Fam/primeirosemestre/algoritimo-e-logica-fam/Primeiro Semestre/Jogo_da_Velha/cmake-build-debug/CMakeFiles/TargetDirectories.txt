@@ -1,3 +1,0 @@
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/Jogo_da_Velha/cmake-build-debug/CMakeFiles/Jogo_da_Velha.dir
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/Jogo_da_Velha/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vitin.teixx/Área de Trabalho/--/Win/-/algoritimo-e-logica-fam/Primeiro Semestre/Jogo_da_Velha/cmake-build-debug/CMakeFiles/rebuild_cache.dir
