@@ -29,8 +29,8 @@ public class Pedido {
         return codigo;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Cliente getCliente(Cliente cliente) {
+        return this.cliente;
     }
 
     public List<Produto> getProdutos() {
@@ -53,6 +53,22 @@ public class Pedido {
         produtos.append("]");
 
         return produtos.toString();
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 
     @Override
