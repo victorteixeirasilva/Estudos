@@ -98,7 +98,7 @@ public class Start {
                     produtoNegocio.listarTodos();
                     break;
                 case "8":
-                    //TODO Listar todos os Pedidos
+                    pedidoNegocio.listarPedidos();
                     break;
                 case "9":
                     System.out.println(String.format("Volte sempre %s!", clienteLogado.getNome()));

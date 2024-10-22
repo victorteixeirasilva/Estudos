@@ -95,6 +95,11 @@ public class PedidoNegocio {
     /**
      * Lista todos os pedidos realizados.
      */
-    //TODO Método de listar todos os pedidos
+    public void listarPedidos(){
+        List<Pedido> pedidos = List.of(bancoDados.getPedidos());
+        for (Pedido pedido : pedidos){
+            System.out.println(pedido.toString());
+        }
+    }
 
 }
