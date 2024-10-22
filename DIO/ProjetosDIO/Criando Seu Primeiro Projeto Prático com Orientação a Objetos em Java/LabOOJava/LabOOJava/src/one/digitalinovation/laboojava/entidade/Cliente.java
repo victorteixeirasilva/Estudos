@@ -18,7 +18,7 @@ public class Cliente {
 
     public Cliente() {
         this.nome = "Fulano";
-        this.cpf = "123456789011";
+        this.cpf = "52457589894";
     }
 
     public String getNome() {
