@@ -1,8 +1,11 @@
 package one.digitalinovation.laboojava.negocio;
 
 import one.digitalinovation.laboojava.basedados.Banco;
+import one.digitalinovation.laboojava.entidade.Caderno;
 import one.digitalinovation.laboojava.entidade.Produto;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -55,7 +58,27 @@ public class ProdutoNegocio {
      */
     public void excluir(String codigo) {
         //TODO Implementar a exclusão
+        int produtoExclusao = -1;
+
+        for (int i = 0; i < bancoDados.getProdutos().length; i++) {
+
+            Produto produto = bancoDados.getProdutos()[i];
+            if (produto.getCodigo().equals(codigo)){
+                produtoExclusao = i;
+                break;
+            }
+        }
+
+        if (produtoExclusao != -1) {
+            bancoDados.removerProduto(produtoExclusao);
+            System.out.println("Produto excluído com sucesso.");
+        } else {
+            System.out.println("Produto inexistente.");
+        }
     }
+
+
+
 
     /**
      * Obtem um produto a partir de seu código de cadastro.
@@ -87,5 +110,30 @@ public class ProdutoNegocio {
                 System.out.println(produto.toString());
             }
         }
+    }
+
+
+    public void listarMateria(String qtdMateria) {
+        if (bancoDados.getProdutos().length == 0) {
+            System.out.println("Não existem produtos cadastrados");
+        } else {
+            List<Caderno> listaMaterias = new ArrayList<>();
+
+            for (Produto produto : bancoDados.getProdutos()){
+                if (produto instanceof Caderno) {
+                    Caderno caderno = (Caderno) produto;
+
+                    if (qtdMateria.equalsIgnoreCase(caderno.getQtdMaterias().toString())){
+                        listaMaterias.add(caderno);
+                    }
+                }
+            }
+
+            for (Caderno caderno : listaMaterias){
+                System.out.println(caderno.toString());
+            }
+
+        }
+
     }
 }
