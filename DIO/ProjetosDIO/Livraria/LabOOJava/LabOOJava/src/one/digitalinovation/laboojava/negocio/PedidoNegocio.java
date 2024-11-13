@@ -1,6 +1,7 @@
 package one.digitalinovation.laboojava.negocio;
 
 import one.digitalinovation.laboojava.basedados.Banco;
+import one.digitalinovation.laboojava.entidade.Cliente;
 import one.digitalinovation.laboojava.entidade.Cupom;
 import one.digitalinovation.laboojava.entidade.Pedido;
 import one.digitalinovation.laboojava.entidade.Produto;
@@ -19,6 +20,9 @@ public class PedidoNegocio {
      * {@inheritDoc}.
      */
     private Banco bancoDados;
+
+
+    private ClienteNegocio clienteNegocio;
 
     /**
      * Construtor.
@@ -47,8 +51,8 @@ public class PedidoNegocio {
      * Salva um novo pedido sem cupom de desconto.
      * @param novoPedido Pedido a ser armazenado
      */
-    public void salvar(Pedido novoPedido) {
-        salvar(novoPedido, null);
+    public void salvar(Pedido novoPedido, Cliente clienteLogado) {
+        salvar(novoPedido, null, clienteLogado);
     }
 
     /**
@@ -56,13 +60,13 @@ public class PedidoNegocio {
      * @param novoPedido Pedido a ser armazenado
      * @param cupom Cupom de desconto a ser utilizado
      */
-    public void salvar(Pedido novoPedido, Cupom cupom) {
+    public void salvar(Pedido novoPedido, Cupom cupom, Cliente clienteLogado) {
 
         String codigo = "PE%4d%2d%04d";
         LocalDate hoje = LocalDate.now();
         codigo = String.format(codigo, hoje.getYear(), hoje.getMonthValue(), bancoDados.getPedidos().length);
         novoPedido.setCodigo(codigo);
-        novoPedido.getCliente(bancoDados.getCliente());
+        novoPedido.setCliente(clienteLogado);
         novoPedido.setTotal(calcularTotal(novoPedido.getProdutos(), cupom));
         bancoDados.adicionarPedido(novoPedido);
         System.out.println("Pedido salvo com sucesso.");

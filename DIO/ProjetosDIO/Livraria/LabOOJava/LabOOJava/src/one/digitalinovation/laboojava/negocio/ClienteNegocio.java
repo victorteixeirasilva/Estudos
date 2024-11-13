@@ -2,6 +2,7 @@ package one.digitalinovation.laboojava.negocio;
 
 import one.digitalinovation.laboojava.basedados.Banco;
 import one.digitalinovation.laboojava.entidade.Cliente;
+import one.digitalinovation.laboojava.utilidade.LeitoraDados;
 
 import java.util.Optional;
 
@@ -31,18 +32,24 @@ public class ClienteNegocio {
      */
     public Optional<Cliente> consultar(String cpf) {
 
-        if (bancoDados.getCliente().getCpf().equals(cpf)) {
-            return Optional.of(bancoDados.getCliente());
-        } else {
-            return Optional.empty();
+        for (Cliente cliente : bancoDados.getClientes()) {
+            if (cliente.getCpf().equals(cpf)){
+                return Optional.of(cliente);
+            }
         }
+        return Optional.empty();
     }
+
 
     /**
      * Cadastra um novo cliente.
      * @param cliente Novo cliente que terá acesso a aplicação
      */
     //TODO Fazer a inclusão de cliente
+    public void cadastrarCliente(Cliente cliente) {
+        bancoDados.adicionarCliente(cliente);
+    }
+
 
     /**
      * Exclui um cliente específico.

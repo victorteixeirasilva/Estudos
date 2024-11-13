@@ -2,6 +2,7 @@ package one.digitalinovation.laboojava.negocio;
 
 import one.digitalinovation.laboojava.basedados.Banco;
 import one.digitalinovation.laboojava.entidade.Caderno;
+import one.digitalinovation.laboojava.entidade.Livro;
 import one.digitalinovation.laboojava.entidade.Produto;
 
 import java.util.ArrayList;
@@ -112,6 +113,36 @@ public class ProdutoNegocio {
         }
     }
 
+    public void consultaLivro(String  nomeLivro){
+
+        if (bancoDados.getProdutos().length == 0) {
+            System.out.println("Não existem produtos cadastrados");
+        } else {
+            List<Livro> livros = new ArrayList<>();
+
+            for (Produto produto : bancoDados.getProdutos()){
+                if (produto instanceof Livro) {
+                    Livro livro = (Livro) produto;
+
+                    if (nomeLivro.equalsIgnoreCase(livro.getNome())){
+                        livros.add(livro);
+                    } else {
+                        System.out.println("Não existe nenhum livro com esse nome ("+nomeLivro+").");
+                    }
+
+                } else {
+                    System.out.println("Não existem produtos do tipo (LIVRO), cadastrados!");
+                }
+            }
+
+            for (Livro livro : livros){
+                System.out.println(livro.toString());
+            }
+        }
+
+
+
+    }
 
     public void listarMateria(String qtdMateria) {
         if (bancoDados.getProdutos().length == 0) {
@@ -125,7 +156,11 @@ public class ProdutoNegocio {
 
                     if (qtdMateria.equalsIgnoreCase(caderno.getQtdMaterias().toString())){
                         listaMaterias.add(caderno);
+                    } else {
+                        System.out.println("Não existem cadernos cadastrados com essa quantidade de materias ("+qtdMateria+")");
                     }
+                } else {
+                    System.out.println("Não existem produtos do tipo (CADERNO), cadastrados!");
                 }
             }
 
