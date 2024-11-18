@@ -3,7 +3,7 @@ package one.digitalinovation.laboojava.entidade;
 /**
  * Classe que representa a entidade cupom. Este pode ser utilizado no ato do fechamento do pedido
  * para obter um desconto, caso desejado.
- * @author thiago leite
+ * @author Victor Teixeira Silva.
  */
 public class Cupom {
 

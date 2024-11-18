@@ -12,7 +12,7 @@ import java.util.Optional;
 
 /**
  * Classe para manipular a entidade {@link Pedido}.
- * @author thiago leite
+ * @author Victor Teixeira Silva.
  */
 public class PedidoNegocio {
 

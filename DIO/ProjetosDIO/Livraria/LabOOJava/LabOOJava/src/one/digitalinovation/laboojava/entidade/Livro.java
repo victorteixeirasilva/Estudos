@@ -4,7 +4,7 @@ import one.digitalinovation.laboojava.entidade.constantes.Genero;
 
 /**
  * Classe que representa um livro, qual é uma especialização de um produto da loja.
- * @author thiago leite
+ * @author Victor Teixeira Silva.
  */
 public class Livro extends Produto {
 

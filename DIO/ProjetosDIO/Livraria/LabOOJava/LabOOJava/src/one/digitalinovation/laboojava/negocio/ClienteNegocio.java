@@ -8,7 +8,7 @@ import java.util.Optional;
 
 /**
  * Classe para manipular a entidade {@link Cliente}.
- * @author thiago leite
+ * @author Victor Teixeira Silva.
  */
 public class ClienteNegocio {
 
@@ -45,7 +45,6 @@ public class ClienteNegocio {
      * Cadastra um novo cliente.
      * @param cliente Novo cliente que terá acesso a aplicação
      */
-    //TODO Fazer a inclusão de cliente
     public void cadastrarCliente(Cliente cliente) {
         bancoDados.adicionarCliente(cliente);
     }
@@ -53,8 +52,11 @@ public class ClienteNegocio {
 
     /**
      * Exclui um cliente específico.
-     * @param cpf CPF do cliente
+     * @param cliente Objeto do tipo cliente
      */
     //TODO Fazer a exclusão de cliente
+    public  void excluirCliente(Cliente cliente)  {
+        bancoDados.removerCliente(cliente);
+    }
 
 }

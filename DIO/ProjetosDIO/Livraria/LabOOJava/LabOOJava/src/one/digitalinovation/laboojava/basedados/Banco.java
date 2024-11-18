@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Classe responsável por simular um banco de dados. Esta faz as inserções e exclusões da
  * aplicação. Atualizações não são permitidas para facilitar o funcionamento da aplicação.
- * @author thiago leite
+ * @author Victor Teixeira Silva
  */
 public class Banco {
 
@@ -78,7 +78,12 @@ public class Banco {
     public void removerPedido(int posicao) {
         pedidos.remove(posicao);
     }
+
     public void adicionarCliente(Cliente cliente){
         clientes.add(cliente);
+    }
+
+    public void removerCliente(Cliente cliente) {
+        clientes.remove(cliente);
     }
 }

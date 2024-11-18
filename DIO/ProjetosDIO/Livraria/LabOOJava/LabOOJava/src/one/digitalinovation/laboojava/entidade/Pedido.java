@@ -6,22 +6,33 @@ import java.util.Optional;
 
 /**
  * Classe que representa a entidade pedido, qual é a compra dos produtos por um cliente.
- * @author Victor Teixeira
+ * @author Victor Teixeira Silva.
  */
 public class Pedido {
 
-    //codigo
+    /**
+     * Código do Pedido
+     */
     private String codigo;
 
-    //cliente
+    /**
+     * Objeto do tipo Cliente.
+     */
     private Cliente cliente;
 
-    //produtos
+    /**
+     *  Lista de Produtos presente no Pedido.
+     */
     private List<Produto> produtos;
 
-    //total
+    /**
+     * Valor total do pedido.
+     */
     private double total;
 
+    /**
+     * Construtor do Pedido iniciando uma lista para armazenar os produtos.
+     */
     public Pedido(){
         this.produtos = new ArrayList<>();
     }
@@ -42,6 +53,10 @@ public class Pedido {
         return total;
     }
 
+    /**
+     * Método responsável por ler a lista de produtos e organizar e retornar os itens comprados no pedido.
+     * @return Mensagem para mostrar os itens comprados no pedido.
+     */
     private String getProdutosComprados() {
         StringBuilder produtos = new StringBuilder();
         produtos.append("[");

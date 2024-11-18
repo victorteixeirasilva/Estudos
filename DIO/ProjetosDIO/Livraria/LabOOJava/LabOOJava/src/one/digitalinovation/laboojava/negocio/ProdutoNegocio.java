@@ -11,7 +11,7 @@ import java.util.Optional;
 
 /**
  * Classe para manipular a entidade {@link Produto}.
- * @author thiago leite
+ * @author Victor Teixeira Silva.
  */
 public class ProdutoNegocio {
 
@@ -113,6 +113,10 @@ public class ProdutoNegocio {
         }
     }
 
+    /**
+     * Cosulta um livro pelo seu nome.
+     * @param nomeLivro
+     */
     public void consultaLivro(String  nomeLivro){
 
         if (bancoDados.getProdutos().length == 0) {
@@ -144,6 +148,10 @@ public class ProdutoNegocio {
 
     }
 
+    /**
+     * Lista todos os livros de uma quantidade de matérias especificas.
+     * @param qtdMateria
+     */
     public void listarMateria(String qtdMateria) {
         if (bancoDados.getProdutos().length == 0) {
             System.out.println("Não existem produtos cadastrados");

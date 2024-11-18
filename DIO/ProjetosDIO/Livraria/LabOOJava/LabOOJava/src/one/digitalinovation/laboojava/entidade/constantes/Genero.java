@@ -2,7 +2,7 @@ package one.digitalinovation.laboojava.entidade.constantes;
 
 /**
  * Gêneros dos livros vendidos.
- * @author thiago leite
+ * @author Victor Teixeira Silva.s
  */
 public enum Genero {
 

@@ -2,7 +2,7 @@ package one.digitalinovation.laboojava.entidade;
 
 /**
  * Classe que representa a entidade cliente. Este pode fazer um pedido.
- * @author thiago leite
+ * @author Victor Teixeira Silva.
  */
 public class Cliente {
 

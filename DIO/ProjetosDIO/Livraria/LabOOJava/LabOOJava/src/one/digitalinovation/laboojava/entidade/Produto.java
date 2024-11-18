@@ -2,7 +2,7 @@ package one.digitalinovation.laboojava.entidade;
 
 /**
  * Classe que representa a abstração dos produtos que podem ser vendidos pela loja.
- * @author thiago leite
+ * @author Victor Teixeira Silva.
  */
 public abstract class Produto {
 

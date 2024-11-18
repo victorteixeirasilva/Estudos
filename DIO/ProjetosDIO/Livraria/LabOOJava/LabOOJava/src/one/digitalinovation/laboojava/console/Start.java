@@ -11,7 +11,7 @@ import java.util.Optional;
 
 /**
  * Classe responsável por controlar a execução da aplicação.
- * @author thiago leite
+ * @author Victor Teixeira Silva
  */
 public class Start {
 
@@ -149,6 +149,11 @@ public class Start {
         }
     }
 
+    /**
+     * Método responsável por identificar se é um cadastro existente,
+     * ou se não existe um cadastro, e por fim retornar um objeto do tipo cliente.
+     * @return Cliente.
+     */
     private static Optional<Cliente> login(){
 
         while (true){

@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  * Classe utilitária para auxiliar na leitura de entradas de dados via teclado.
- * @author thiago leite
+ * @author Victor Teixeira Silva.
  */
 public final class LeitoraDados {
 
@@ -135,6 +135,10 @@ public final class LeitoraDados {
         return Optional.empty();
     }
 
+    /**
+     * Ler os dados de um cliente e cadastrá-lo, após isso retornar um obejeto do tipo Cliente
+     * @return retorna um cliente cadastrado.
+     */
     public static Cliente lerCliente() {
         System.out.println("Digite o cpf para cadastro:");
         String cpf = LeitoraDados.lerDado();
